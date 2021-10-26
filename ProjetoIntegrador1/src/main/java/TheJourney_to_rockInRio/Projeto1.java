@@ -44,7 +44,7 @@ public class Projeto1 {
                         jogar();
                         break;
                     case 3:
-                        System.out.println("---- INTEGRANTES DO GRUPO 8 PARA O PROJETO INTEGRADOR 1º SEMESTRE -----"
+                        System.out.println("---INTEGRANTES DO GRUPO 8 PARA O PROJETO INTEGRADOR 1º SEMESTRE -----"
                                 + "\nIgor"
                                 + "\nLucilene"
                                 + "\nJoão Pablo"
