@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Projeto1 {
 
-    int pontos = 0;
+    static int pontos = 0;
 
     public static void main(String[] args) {
 
@@ -59,7 +59,7 @@ public class Projeto1 {
         }
     }
 
-    static void jogar() {
+    public static void jogar() {
         Scanner jogar = new Scanner(System.in);
 
         String integrante,
@@ -118,13 +118,13 @@ public class Projeto1 {
     }
 // TEM QUE VER COMO QUE USA UMA VARIAVEL DE OUTRO MÉTODO
 
-    static void desafio1() {
+    public static void desafio1() {
 
-        Scanner d1 = new Scanner(System.in);
-        Projeto1 pontos = new Projeto1();//variavel de pontos
+        Scanner input = new Scanner(System.in);
+        
 
         int banda = 0;// variavel da escolha da banda
-        // int pontos = 0;//variavel de pontos
+        
         String resposta1;// reposta das perguntas
 
         System.out.println("\nQUE LEGAL VOCÊ COMEÇA HOJE A SUA CAMINHADA PARA O ROCK IN RIO"
@@ -137,7 +137,7 @@ public class Projeto1 {
                 + "\n[4] BANDA CAPITAL INICIAL"
                 + "\n[5] BAMDA RED HOT CHILLI PEPERS"
                 + "\n ------- QUAL BANDA VOCÊ ESCOLHE??? -------");
-        banda = d1.nextInt();
+        banda = input.nextInt();
 
         switch (banda) {
             //ESCOLHA DA BANDA 1
@@ -154,7 +154,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -162,7 +162,7 @@ public class Projeto1 {
                         break;
                     case "b":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "c":
                         System.out.println("Você errou");
@@ -179,7 +179,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -187,7 +187,7 @@ public class Projeto1 {
                         break;
                     case "b":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "c":
                         System.out.println("Você errou");
@@ -205,7 +205,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -213,7 +213,7 @@ public class Projeto1 {
                         break;
                     case "b":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "c":
                         System.out.println("Você errou");
@@ -230,7 +230,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -238,7 +238,7 @@ public class Projeto1 {
                         break;
                     case "b":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 1;
                         break;
                     case "c":
                         System.out.println("Você errou");
@@ -255,7 +255,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -263,7 +263,7 @@ public class Projeto1 {
                         break;
                     case "b":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 1;
+                        pontos = pontos + 1;
                         break;
                     case "c":
                         System.out.println("Você errou");
@@ -271,8 +271,8 @@ public class Projeto1 {
                         System.out.println("Você errou");
                     default:
                 }
-                if (pontos.pontos >= 30) {
-                    System.out.println("Você fez: " + pontos.pontos + " pontos");
+                if (pontos >= 30) {
+                    System.out.println("Você fez: " + pontos + " pontos");
                     System.out.println("PARABÉNS VOCÊ ENTROU PARA BANDA");
                     desafio2();
                     break;
@@ -295,7 +295,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -306,7 +306,7 @@ public class Projeto1 {
                         break;
                     case "c":
                         System.out.println("PArabéns você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "d":
                         System.out.println("Você errou");
@@ -321,12 +321,12 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "b":
                         System.out.println("Você errou");
@@ -348,7 +348,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -359,7 +359,7 @@ public class Projeto1 {
                         break;
                     case "c":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "d":
                         System.out.println("Você errou");
@@ -375,7 +375,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -386,7 +386,7 @@ public class Projeto1 {
                         break;
                     case "c":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "d":
                         System.out.println("Você errou");
@@ -402,7 +402,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -413,13 +413,13 @@ public class Projeto1 {
                         break;
                     case "c":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                     case "d":
                         System.out.println("Você errou");
                     default:
                 }
-                if (pontos.pontos >= 30) {
-                    System.out.println("Você fez: " + pontos.pontos + " pontos");
+                if (pontos >= 30) {
+                    System.out.println("Você fez: " + pontos + " pontos");
                     System.out.println("PARABÉNS VOCÊ ENTROU PARA BANDA");
                     desafio2();
                     break;
@@ -443,12 +443,12 @@ public class Projeto1 {
                         + "\n(d) SENTADA");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "b":
                         System.out.println("Você errou");
@@ -468,7 +468,7 @@ public class Projeto1 {
                         + "\n(d) 2001");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -482,7 +482,7 @@ public class Projeto1 {
                         break;
                     case "d":
                         System.out.println("Parabéns você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     default:
                 }
@@ -495,7 +495,7 @@ public class Projeto1 {
                         + "\n(d) Espanha");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -506,7 +506,7 @@ public class Projeto1 {
                         break;
                     case "c":
                         System.out.println("Parabéns você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "d":
                         System.out.println("Você errou");
@@ -522,12 +522,12 @@ public class Projeto1 {
                         + "\n(d) Africa");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
                         System.out.println("Parabéns você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "b":
                         System.out.println("Você errou");
@@ -549,7 +549,7 @@ public class Projeto1 {
                         + "\n(d) 2020");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -563,12 +563,12 @@ public class Projeto1 {
                         break;
                     case "d":
                         System.out.println("Parabéns você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     default:
                 }
-                if (pontos.pontos >= 30) {
-                    System.out.println("Você fez: " + pontos.pontos + " pontos");
+                if (pontos >= 30) {
+                    System.out.println("Você fez: " + pontos + " pontos");
                     System.out.println("PARABÉNS VOCÊ ENTROU PARA BANDA");
                     desafio2();
                     break;
@@ -592,12 +592,12 @@ public class Projeto1 {
                         + "\n(d) SENTADA");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "b":
                         System.out.println("Você errou");
@@ -617,7 +617,7 @@ public class Projeto1 {
                         + "\n(d) 2001");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -631,7 +631,7 @@ public class Projeto1 {
                         break;
                     case "d":
                         System.out.println("Parabéns você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     default:
                 }
@@ -644,7 +644,7 @@ public class Projeto1 {
                         + "\n(d) Espanha");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -655,7 +655,7 @@ public class Projeto1 {
                         break;
                     case "c":
                         System.out.println("Parabéns você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "d":
                         System.out.println("Você errou");
@@ -671,12 +671,12 @@ public class Projeto1 {
                         + "\n(d) Africa");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
                         System.out.println("Parabéns você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "b":
                         System.out.println("Você errou");
@@ -698,7 +698,7 @@ public class Projeto1 {
                         + "\n(d) 2020");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -712,12 +712,12 @@ public class Projeto1 {
                         break;
                     case "d":
                         System.out.println("Parabéns você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     default:
                 }
-                if (pontos.pontos >= 30) {
-                    System.out.println("Você fez: " + pontos.pontos + " pontos");
+                if (pontos >= 30) {
+                    System.out.println("Você fez: " + pontos + " pontos");
                     System.out.println("PARABÉNS VOCÊ ENTROU PARA BANDA");
                     desafio2();
                     break;
@@ -741,12 +741,12 @@ public class Projeto1 {
                         + "\n(d) SENTADA");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "b":
                         System.out.println("Você errou");
@@ -766,7 +766,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -774,7 +774,7 @@ public class Projeto1 {
                         break;
                     case "b":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "c":
                         System.out.println("Você errou");
@@ -791,7 +791,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -799,7 +799,7 @@ public class Projeto1 {
                         break;
                     case "b":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "c":
                         System.out.println("Você errou");
@@ -816,7 +816,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -824,7 +824,7 @@ public class Projeto1 {
                         break;
                     case "b":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "c":
                         System.out.println("Você errou");
@@ -841,7 +841,7 @@ public class Projeto1 {
                         + "\n(d) Ele é um corredor");
 
                 System.out.println("Escolha a resposta certa:");
-                resposta1 = d1.next();
+                resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
@@ -849,7 +849,7 @@ public class Projeto1 {
                         break;
                     case "b":
                         System.out.println("Você acertou");
-                        pontos.pontos = pontos.pontos + 10;
+                        pontos = pontos + 10;
                         break;
                     case "c":
                         System.out.println("Você errou");
@@ -857,8 +857,8 @@ public class Projeto1 {
                         System.out.println("Você errou");
                     default:
                 }
-                if (pontos.pontos >= 30) {
-                    System.out.println("Você fez: " + pontos.pontos + " pontos");
+                if (pontos >= 30) {
+                    System.out.println("Você fez: " + pontos + " pontos");
                     System.out.println("PARABÉNS VOCÊ ENTROU PARA BANDA");
                     desafio2();
                     break;
@@ -870,7 +870,7 @@ public class Projeto1 {
     }
 
     static void desafio2() {
-        Projeto1 pontos = new Projeto1();
+        
         Scanner desafio2 = new Scanner(System.in);
 
         System.out.println("\n\nPARABÉNS, VOCÊ ESTÁ INDO MUITO BEM, AGORA VOCÊ ESTÁ EM OUTRO DESAFIO");
@@ -886,7 +886,7 @@ public class Projeto1 {
 
         for (int i = 1; i <= 4; i++) {
             System.out.println("Escolha o empersario que você acha que a banda está de acordo:");
-            pontos.pontos = pontos.pontos + 10; //SOMA DOS PONTOS
+            pontos = pontos + 10; //SOMA DOS PONTOS
             empresario = desafio2.nextLine();
 
             if (empresario.equals("Antonio")) {
