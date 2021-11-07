@@ -1207,7 +1207,7 @@ public class Projeto1 {
             System.out.println("O público ficou feliz, sua banda recebeu mais 50 pontos!");
             pontos=pontos+50;
         }else if(acertos==2 || acertos==3){
-            System.out.println("O público ficou indiferente, sua banda recebeu mais 50 pontos!");
+            System.out.println("O público ficou indiferente, sua banda recebeu mais 25 pontos!");
             pontos=pontos+25;
         }else if(acertos==0 || acertos==1){
             System.out.println("O público ficou triste, sua banda perdeu 25 pontos!");
