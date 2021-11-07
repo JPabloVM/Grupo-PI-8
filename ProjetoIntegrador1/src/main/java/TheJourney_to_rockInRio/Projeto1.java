@@ -904,7 +904,46 @@ public class Projeto1 {
     static void desafio3() {
         System.out.println("DESAFIO 3");
     }
-    static void desafio4() {
-        System.out.println("DESAFIO 4.");
+    static void desafio8() {
+        Scanner input = new Scanner(System.in);
+        int musica, gostou = 0;
+        String ligacao;
+         
+        
+        //Oitavo desafio
+        System.out.println("Vocês se encontram com um empresário querendo ver uma apresentação sua!");
+        
+        do {            
+            System.out.println("Escolha uma música para apresentar com sua banda.");
+            System.out.println("1 - musica\n2 - musica\n3 - musica\n4 - musica");
+            musica = input.nextInt();
+            
+            if (musica == 4) {
+                System.out.println("O empresário gostou da apresentação da banda");
+                gostou = 1;
+            } else {
+                if (musica > 0 && musica <= 3) {
+                    System.out.println("A apresentação não impressionou o empresário");
+                    System.out.println("O rock in rio ja foi anunciado e vocês não conseguiram participar.\nQuem sabe ano que vem.");
+                    break;
+                } else {
+                    System.err.println("Número inválido\n");
+                }
+
+            }
+        } while (musica > 4);
+
+        if(gostou == 1){
+            System.out.println("Você recebem uma ligação anonima deseja atender?(S/N)");
+            ligacao = input.next();
+            
+            if(ligacao.equals("s") || ligacao.equals("S")  ){
+                System.out.println("Você descobre que a ligação erá do empresário,\ndizendo que consegiu uma vaga no rock in rio para a sua banda!");
+                
+            }else{
+                System.out.println("O rock in rio ja foi anunciado e vocês não conseguiram participar.\n Quem sabe ano que vem.");
+            }
+            
+        }
     }
 }
