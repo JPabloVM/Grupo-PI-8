@@ -904,4 +904,7 @@ public class Projeto1 {
     static void desafio3() {
         System.out.println("DESAFIO 3");
     }
+    static void desafio4() {
+        System.out.println("DESAFIO 4");
+    }
 }
