@@ -927,7 +927,7 @@ public class Projeto1 {
                 + "\n Caso acerte 2 ou 3 músicas o público ficará indifirente e cada personagem recebe 25 pontos de habilidade. \n"
                 + "\n Caso não acerte nenhuma música, ou acerte apenas 1, o público ficará triste e cada personagem perde 25 pontos! \n");
 
-        int pontos = 0;
+        
         int acertos = 0;
 
         String resposta;
@@ -1203,9 +1203,15 @@ public class Projeto1 {
 
         System.out.println("Você acertou " + acertos + " músicas");
         
-        if(acertos==5){
+        if(acertos==4 || acertos==5){
             System.out.println("O público ficou feliz, sua banda recebeu mais 50 pontos!");
-            
+            pontos=pontos+50;
+        }else if(acertos==2 || acertos==3){
+            System.out.println("O público ficou indiferente, sua banda recebeu mais 50 pontos!");
+            pontos=pontos+25;
+        }else if(acertos==0 || acertos==1){
+            System.out.println("O público ficou triste, sua banda perdeu 25 pontos!");
+            pontos=pontos-25;
         }
     }
 static void desafio8() {
