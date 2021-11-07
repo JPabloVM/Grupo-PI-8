@@ -901,10 +901,314 @@ public class Projeto1 {
 
     }
 
-    static void desafio3() {
+      
+         public static void desafio3(){
+        Scanner input = new Scanner(System.in);
+
         System.out.println("DESAFIO 3");
+
+        System.out.println("Parabéns por escolher o Antônio como seu empresário, ele é um dos melhores nesse ramo e tenho certeza "
+                + "que você não vai se arrepender da sua escolha! \n ");
+        System.out.println("Alguns dias depois... \n");
+        System.out.println("Antonio: Eu tenho uma ótima notícia para vocês! Antes de mais nada, muito obrigado por me dar o "
+                + "prívilégio de ser o empresário dessa banda!"
+                + "\n Agora vem a boa notícia: eu marquei o primeiro show de vocês,nesse show vocês iram tocar 5 músicas, "
+                + "porém prestem muita atenção na hora de escolher a música"
+                + "\n porque o público pode não gostar muito da música se for de um estilo muito diferente deles!"
+                + "\n Eu tenho as informações do público para que vocês estudem quais músicas escolher. Tô passando uma "
+                + "lista contendo : Sexo, idade e gênero de todos que compraram os ingressos e a lista de músicas"
+                + "\n =======Lista público========= \n"
+                + "\n =======Lista de Músicas ======== \n"); //Criar uma lista que com as infos do público
+
+        System.out.println("Obs: Vocês precisam dar o seu máximo para alegrar esse público, para que assim aumentem suas habilidades "
+                + "e pontos para o jogo"
+                + "\n Abaixo está os pontos que vão conseguir de acordo com suas escolhas: \n "
+                + "\n Caso acerte 4 ou 5 músicas o público ficará feliz e cada personagem recebe 50 pontos de habilidade \n"
+                + "\n Caso acerte 2 ou 3 músicas o público ficará indifirente e cada personagem recebe 25 pontos de habilidade. \n"
+                + "\n Caso não acerte nenhuma música, ou acerte apenas 1, o público ficará triste e cada personagem perde 25 pontos! \n");
+
+        int pontos = 0;
+        int acertos = 0;
+
+        String resposta;
+        System.out.println("Digite a letra da primeira música escolhida: ");
+        resposta = input.next();
+
+        char resposta1 = resposta.charAt(0);
+
+        switch (resposta1) {
+
+            case 'a':
+                System.out.println("O público não gostou dessa música! \n");
+
+                break;
+            case 'b':
+                System.out.println("O público amou essa música! \n");
+
+                acertos++;
+                break;
+            case 'c':
+                System.out.println("O público gostou essa música! \n");
+                acertos++;
+                break;
+
+            case 'd':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'e':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'f':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'g':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'h':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'i':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'j':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            default:
+                System.out.println("Opção inválida");
+        }
+
+        System.out.println("Digite a letra da segunda música escolhida: ");
+        resposta = input.next();
+        char resposta2 = resposta.charAt(0);
+
+        switch (resposta2) {
+
+            case 'a':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'b':
+                System.out.println("O público amou essa música! \n");
+                acertos++;
+                break;
+
+            case 'c':
+                System.out.println("O público gostou essa música! \n");
+                acertos++;
+                break;
+
+            case 'd':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'e':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'f':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'g':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'h':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'i':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'j':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            default:
+                System.out.println("Opção inválida");
+        }
+
+        System.out.println("Digite a letra da terceira música escolhida: ");
+        resposta = input.next();
+        char resposta3 = resposta.charAt(0);
+
+        switch (resposta3) {
+
+            case 'a':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'b':
+                System.out.println("O público amou essa música! \n");
+                acertos++;
+                break;
+
+            case 'c':
+                System.out.println("O público gostou essa música! \n");
+                acertos++;
+                break;
+
+            case 'd':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'e':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'f':
+                System.out.println("O público não gostou dessa música! \n");
+
+                break;
+
+            case 'g':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'h':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'i':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'j':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            default:
+                System.out.println("Opção inválida");
+        }
+
+        System.out.println("Digite a letra da quinta música escolhida: ");
+        resposta = input.next();
+        char resposta4 = resposta.charAt(0);
+
+        switch (resposta4) {
+
+            case 'a':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+            case 'b':
+                System.out.println("O público amou essa música! \n");
+                acertos++;
+                break;
+            case 'c':
+                System.out.println("O público gostou essa música! \n");
+                acertos++;
+                break;
+            case 'd':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'e':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'f':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'g':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'h':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'i':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'j':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            default:
+                System.out.println("Opção inválida");
+        }
+        System.out.println("Digite a letra da quinta música escolhida: ");
+        resposta = input.next();
+        char resposta5 = resposta.charAt(0);
+
+        switch (resposta5) {
+
+            case 'a':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+            case 'b':
+                System.out.println("O público amou essa música! \n");
+                acertos++;
+                break;
+            case 'c':
+                System.out.println("O público gostou essa música! \n");
+                acertos++;
+                break;
+            case 'd':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'e':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'f':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'g':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'h':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            case 'i':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'j':
+                System.out.println("O público não gostou dessa música! \n");
+                break;
+
+            default:
+                System.out.println("Opção inválida");
+        }
+
+        System.out.println("Você acertou " + acertos + " músicas");
+        
+        if(acertos==5){
+            System.out.println("O público ficou feliz, sua banda recebeu mais 50 pontos!");
+            
+        }
     }
-    static void desafio8() {
+static void desafio8() {
         Scanner input = new Scanner(System.in);
         int musica, gostou = 0;
         String ligacao;
