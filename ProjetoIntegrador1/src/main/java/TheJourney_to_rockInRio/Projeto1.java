@@ -905,6 +905,6 @@ public class Projeto1 {
         System.out.println("DESAFIO 3");
     }
     static void desafio4() {
-        System.out.println("DESAFIO 4");
+        System.out.println("DESAFIO 4.");
     }
 }
