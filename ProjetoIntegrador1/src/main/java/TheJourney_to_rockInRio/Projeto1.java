@@ -1214,6 +1214,62 @@ public class Projeto1 {
             pontos=pontos-25;
         }
     }
+         
+         static void desafio4(){
+             Scanner input = new Scanner(System.in);
+        
+        System.out.println("Após o seu primeiro show você ganhou alguns fãs e "
+                + "todos eles estão seguindo a banda nas redes sociais,"
+                + "por isso seria muito bom para a banda se vocês fizessem um "
+                + "vídeo para o YouTube e Instagram falando um pouco sobre como foi o show!");
+        System.out.println("Você irá fazer o vídeo? \n Obs: Responda com sim ou não!");
+        String resposta = input.nextLine();
+
+        switch (resposta) {
+            case "Sim":
+                System.out.println("Graças ao vídeo sua banda ganhou mais 5 mil seguidores no Instagram"
+                        + "e 2500 inscritos no YouTube.");
+                System.out.println("Além disso ainda fomos convidados para um festival que valerá +150 pontos e 3 mil reais!");
+                pontos = pontos + 25;
+
+                break;
+            case "Não":
+                System.out.println("Já que você não fez o vídeo você acabou perdendo 2500 seguidores no Intagram, 1250"
+                        + "incritos no YouTube e 50 pontos de poder!");
+                System.out.println("Porém por sorte você acabou sendo convidado para um festival que valerá +150 pontos e 3 mil reais!");
+                pontos = pontos - 50;
+            default:
+                System.out.println("Opção inválida!Tente novamente.");
+        }
+
+        System.out.println("\n Dois meses depois...");
+        System.out.println("Eu: Eai pessoal todos preparados para o festival? Hoje vai ser um grande dia,"
+                + "não podemos esquecer que é uma batalha entre bandas, nós precisamos batalhar contra uma mais fraca que nós!"
+                + "Por sorte só mais 3 bandas além da nossa, irão batalhar, o restante irá apenas tocar no festival.");
+        System.out.println("Antonio abre a porta do camarim: \n Opa, vim avisar que daqui 10 minutos vai começar o festival."
+                + "\n Precisamos decidir com qual banda vamos batalhar antes de irmos para o palco. "
+                + "\n Consegui um pouco de informações sobre essas bandas, olha aí a lista: "
+                + "\n (1)Banda os loucos: infos"
+                + "\n (2)Banda metalicos : infos"
+                + "\n (3)Banda assasins: infos"); // elaborar uma lista contendo informações da banda, ao ínves de mostrar os pontos dela
+        System.out.println("Eai qual com você quer batalhar? "
+                + "\n Obs: Digite o número da banda");
+        int bandarival = input.nextInt();
+        int banda1 = 1, banda2 = 2, banda3 = 3; //definir niveis de poder
+
+        if (bandarival == banda1) {
+            System.out.println("Infelizmente você perdeu a batalha! Porque a banda os loucos tinham um poder de 1000!"
+                    + " Com isso seu poder diminuiu 50 pontos e você foi desclassificado da batalha.");
+            pontos = pontos - 50;
+
+        } else if (bandarival == banda2) {
+            System.out.println("Parábens você venceu a batalha!! A banda 2 tinha apenas 150 pontos e você ganhou mais 100 pontos de poder");
+            pontos = pontos + 100;
+        } else if (bandarival == banda3) {
+            System.out.println("Infelizmente você perdeu a batalha! Porque a banda os loucos tinham um poder de 2000!"
+                    + "Com isso seu poder diminuiu 50 pontos e você foi desclassificado da batalha.");
+        }
+         }
 static void desafio8() {
         Scanner input = new Scanner(System.in);
         int musica, gostou = 0;
