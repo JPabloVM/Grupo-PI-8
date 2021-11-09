@@ -1275,7 +1275,7 @@ public class Projeto1 {
 
     public static Random rand = new Random();
 
-    public void desafio7(String[] args) {
+    static void desafio7() {
         Random rand = new Random();
         Scanner input = new Scanner(System.in);
         int musica, aleatorio;
