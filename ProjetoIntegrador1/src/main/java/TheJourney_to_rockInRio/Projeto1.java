@@ -71,8 +71,8 @@ public class Projeto1 {
                 integrante4 = "Zeca",
                 integrante5 = "João";
 
-        System.out.println("\nAgora que você decidiu seguir essa carreira do Rock vamos escolher quem você!!"
-                + "\nIrá levar para o Rock-In-Rio");
+        System.out.println("\nAgora que você decidiu seguir essa carreira do Rock vamos escolher quem você"
+                + "irá levar para o Rock-In-Rio");
 
         System.out.println("\nPara começar escolha seu personagem e instrumento que vc quer tocar:");
 
@@ -80,11 +80,13 @@ public class Projeto1 {
          Se o usuario digitar um dos integrantes listados o laço para e informa o integrante,
          Se digitar qualquer outro nome as opções aparecem denovo, para escolher.*/
         do {
-            System.out.println("\nTati  -  Vocal"
-                    + "\nAkira -  Guitarra"
-                    + "\nJeff  -  Baixo"
-                    + "\nZeca  -  Baterista"
-                    + "\nJoão  -  Violão");
+            System.out.println("\nTati  -  Vocalista "
+                    + "\nAkira -  Guitarra (Akira é um mestiço japonês que sofreu preconceito durante toda a sua infância,\n"
+                    + "enquanto morava em uma pequena cidade do Japão. Ao crescer, decidiu vir\n"
+                    + "para o Brasil conhecer a família de sua mãe)"
+                    + "\nJeff  -  Baixista (Jefferson, apelido Jeff teve uma infância humilde e devido ao péssimo relacionamento com os pais decidiu morar sozinho aos 18 anos.)"
+                    + "\nZeca  -  Baterista (Zeca é proprietário de uma escola de música. Tinha uma vida estável até a morte de seus pais em um acidente.)"
+                    + "\nJoão  -  Violão (Tati e órfã e foi criada pela tia.)");
 
             System.out.println("\n Escolha um integrante:");
             integrante = jogar.nextLine();
