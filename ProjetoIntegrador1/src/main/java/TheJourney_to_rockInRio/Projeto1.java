@@ -134,7 +134,7 @@ public class Projeto1 {
                 + "\nMAS PARA ISSO VOCÊ PASSARA POR ALGUNS DEFAFIOS. "
                 + "\n\n-------- DESAFIO 01 ESCOLHA DA BANDA -------");
 
-        System.out.println("\n[1] BANDA GUNS ROSES"
+        System.out.println("\n[1] BANDA GUNS N' ROSES"
                 + "\n[2] BANDA PARALAMAS"
                 + "\n[3] BANDA CPM22" //escrever sobre as bandas
                 + "\n[4] BANDA CAPITAL INICIAL"
@@ -146,7 +146,7 @@ public class Projeto1 {
             //ESCOLHA DA BANDA 1
             case 1:
                 //PRIMEIRA PERGUNTA DA BANDA 1
-                System.out.println("\n\nVocê escolheu guns roses, parabéns essa banda é muito top"
+                System.out.println("\n\nVocê escolheu Guns N'Roses, parabéns essa banda é muito top"
                         + "\n mas para confirmar a sua entrada na banda você terá que responder algumas perguntas nossas" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
                         + "\n para você poder entrar, você tera que acertar 3 respostas de 5 perguntas"
                         + "\n---- PERGUNTA 1 -----"
@@ -1214,7 +1214,10 @@ public class Projeto1 {
             System.out.println("O público ficou triste, sua banda perdeu 25 pontos!");
             pontos = pontos - 25;
         }
+        desafio4();
     }
+
+    
 
     static void desafio4() {
         Scanner input = new Scanner(System.in);
@@ -1270,8 +1273,11 @@ public class Projeto1 {
             System.out.println("Infelizmente você perdeu a batalha! Porque a banda os loucos tinham um poder de 2000!"
                     + "Com isso seu poder diminuiu 50 pontos e você foi desclassificado da batalha.");
         }
+        //desafio5();
+        desafio7();
     }
 
+    
     //DESAFIO 7    
     public static int vida = 100; //vida da banda
     public static int vidaenemy = 100; //vida do inimigo
@@ -1431,7 +1437,9 @@ public class Projeto1 {
         }
 
         System.out.println("PARABÉNS!!\nSUA BANDA FOI A CAMPEÃ DA BATALHA DE BANDAS");
+        desafio8();
     }
+    
 
     //DESAFIO 8
     static void desafio8() {
