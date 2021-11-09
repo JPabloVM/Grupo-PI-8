@@ -27,6 +27,7 @@ public class Projeto1 {
                     + "                             |  |\\  \\----.|  `--'  | |  `----.|  .  \\     |  | |  |\\   |    |  |\\  \\----.|  | |  `--'  | \n"
                     + "                             | _| `._____| \\______/   \\______||__|\\__\\    |__| |__| \\__|    | _| `._____||__|  \\______/  ");
 
+            System.out.println("Bem-vindo a maior jornada da sua vida, onde você irá batalhar contra outras bandas em busca do maior sonho de qualquer banda de Rock, tocar no Rock-in-rio!");
             while (num != 4 && num != 2) {
                 System.out.println("  ESCOLHA UMA OPÇÃO:"
                         + "\n  ================"
@@ -70,8 +71,8 @@ public class Projeto1 {
                 integrante4 = "Zeca",
                 integrante5 = "João";
 
-        System.out.println("\nSEJA BEM VINDO AO SEU MAIOR DESAFIO, E O COMEÇO DO SEU MAIOR SONHO!!"
-                + "\nHOJE VOCÊ COMEÇA A CAMINHADA PARA O GRANDE OBJETIVO, QUE É TOCAR NO ROCK IN RIO");
+        System.out.println("\nAgora que você decidiu seguir essa carreira do Rock vamos escolher quem você!!"
+                + "\nIrá levar para o Rock-In-Rio");
 
         System.out.println("\nPara começar escolha seu personagem e instrumento que vc quer tocar:");
 
@@ -1332,10 +1333,10 @@ public class Projeto1 {
             System.out.println("Sua banda foi derrotada\nGAME OVER!!!");
             System.exit(0);
         }
-        
+
         vida = 100;
         vidaenemy = 100;
-        
+
         //SEGUNDA BANDA
         do {
             /*System.out.println(vidaenemy);*/
@@ -1377,12 +1378,12 @@ public class Projeto1 {
             System.out.println("Você derrotou a BANDA2");
         } else if (vida <= 0) {
             System.out.println("Sua banda foi derrotada\nGAME OVER!!!");
-           System.exit(0);
+            System.exit(0);
         }
 
         vida = 100;
         vidaenemy = 100;
-        
+
         //TERCEIRA BANDA
         do {
             /*System.out.println(vidaenemy);*/
