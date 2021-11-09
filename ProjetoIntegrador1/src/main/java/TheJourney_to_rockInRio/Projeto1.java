@@ -1,5 +1,6 @@
 package TheJourney_to_rockInRio;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Projeto1 {
@@ -121,10 +122,9 @@ public class Projeto1 {
     public static void desafio1() {
 
         Scanner input = new Scanner(System.in);
-        
 
         int banda = 0;// variavel da escolha da banda
-        
+
         String resposta1;// reposta das perguntas
 
         System.out.println("\nQUE LEGAL VOCÊ COMEÇA HOJE A SUA CAMINHADA PARA O ROCK IN RIO"
@@ -870,7 +870,7 @@ public class Projeto1 {
     }
 
     static void desafio2() {
-        
+
         Scanner desafio2 = new Scanner(System.in);
 
         System.out.println("\n\nPARABÉNS, VOCÊ ESTÁ INDO MUITO BEM, AGORA VOCÊ ESTÁ EM OUTRO DESAFIO");
@@ -901,8 +901,7 @@ public class Projeto1 {
 
     }
 
-      
-         public static void desafio3(){
+    public static void desafio3() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("DESAFIO 3");
@@ -927,7 +926,6 @@ public class Projeto1 {
                 + "\n Caso acerte 2 ou 3 músicas o público ficará indifirente e cada personagem recebe 25 pontos de habilidade. \n"
                 + "\n Caso não acerte nenhuma música, ou acerte apenas 1, o público ficará triste e cada personagem perde 25 pontos! \n");
 
-        
         int acertos = 0;
 
         String resposta;
@@ -1202,22 +1200,22 @@ public class Projeto1 {
         }
 
         System.out.println("Você acertou " + acertos + " músicas");
-        
-        if(acertos==4 || acertos==5){
+
+        if (acertos == 4 || acertos == 5) {
             System.out.println("O público ficou feliz, sua banda recebeu mais 50 pontos!");
-            pontos=pontos+50;
-        }else if(acertos==2 || acertos==3){
+            pontos = pontos + 50;
+        } else if (acertos == 2 || acertos == 3) {
             System.out.println("O público ficou indiferente, sua banda recebeu mais 25 pontos!");
-            pontos=pontos+25;
-        }else if(acertos==0 || acertos==1){
+            pontos = pontos + 25;
+        } else if (acertos == 0 || acertos == 1) {
             System.out.println("O público ficou triste, sua banda perdeu 25 pontos!");
-            pontos=pontos-25;
+            pontos = pontos - 25;
         }
     }
-         
-         static void desafio4(){
-             Scanner input = new Scanner(System.in);
-        
+
+    static void desafio4() {
+        Scanner input = new Scanner(System.in);
+
         System.out.println("Após o seu primeiro show você ganhou alguns fãs e "
                 + "todos eles estão seguindo a banda nas redes sociais,"
                 + "por isso seria muito bom para a banda se vocês fizessem um "
@@ -1269,21 +1267,183 @@ public class Projeto1 {
             System.out.println("Infelizmente você perdeu a batalha! Porque a banda os loucos tinham um poder de 2000!"
                     + "Com isso seu poder diminuiu 50 pontos e você foi desclassificado da batalha.");
         }
-         }
-static void desafio8() {
+    }
+
+    //DESAFIO 7    
+    public static int vida = 100; //vida da banda
+    public static int vidaenemy = 100; //vida do inimigo
+
+    public static Random rand = new Random();
+
+    public void desafio7(String[] args) {
+        Random rand = new Random();
+        Scanner input = new Scanner(System.in);
+        int musica, aleatorio;
+
+        //Danos do inimigo
+        int[] dano = new int[5];
+        dano[0] = 10;
+        dano[1] = 10;
+        dano[2] = 20;
+        dano[3] = 25;
+        dano[4] = 30;
+
+        System.out.println("----Batalha entre bandas---- ");
+        //PRIMEIRA BANDA
+        do {
+            /*System.out.println(vidaenemy);*/
+            System.out.println("\nDesafio contra BANDA1");
+            System.out.println("Vida da sua banda = " + vida);
+            System.out.println("Escolha alguma música");
+            System.out.println("1 - Forte \n2 - media \n3 - media \n4 - fraca ");
+            musica = input.nextInt();
+            switch (musica) {
+                case 1:
+                    vidaenemy = vidaenemy - 25;
+                    System.out.println("A música foi muito efetiva");
+                    vida = vida - dano[rand.nextInt(4)];
+                    musica = 0;
+                    break;
+                case 2:
+                    vidaenemy = vidaenemy - 20;
+                    System.out.println("A musica foi boa");
+                    vida = vida - dano[rand.nextInt(4)];
+                    musica = 0;
+                    break;
+                case 3:
+                    vidaenemy = vidaenemy - 20;
+                    System.out.println("A musica foi boa");
+                    vida = vida - dano[rand.nextInt(4)];
+                    musica = 0;
+                    break;
+                case 4:
+                    vidaenemy = vidaenemy - 10;
+                    System.out.println("A musica foi fraca");
+                    vida = vida - dano[rand.nextInt(4)];
+                    musica = 0;
+                    break;
+                default:
+                    System.err.println("Valor invalido");
+            }
+        } while (vidaenemy > 0 && vida > 0 || musica > 4);
+        if (vidaenemy <= 0) {
+            System.out.println("Você derrotou a BANDA1");
+        } else if (vida <= 0) {
+            System.out.println("Sua banda foi derrotada\nGAME OVER!!!");
+            System.exit(0);
+        }
+        
+        vida = 100;
+        vidaenemy = 100;
+        
+        //SEGUNDA BANDA
+        do {
+            /*System.out.println(vidaenemy);*/
+            System.out.println("\nDesafio contra BANDA2");
+            System.out.println("Vida da sua banda = " + vida);
+            System.out.println("Escolha alguma música");
+            System.out.println("1 - Forte \n2 - media \n3 - media \n4 - fraca ");
+            musica = input.nextInt();
+            switch (musica) {
+                case 1:
+                    vidaenemy = vidaenemy - 25;
+                    System.out.println("A música foi muito efetiva");
+                    vida = vida - dano[rand.nextInt(4)];
+                    musica = 0;
+                    break;
+                case 2:
+                    vidaenemy = vidaenemy - 20;
+                    System.out.println("A musica foi boa");
+                    vida = vida - dano[rand.nextInt(4)];
+                    musica = 0;
+                    break;
+                case 3:
+                    vidaenemy = vidaenemy - 20;
+                    System.out.println("A musica foi boa");
+                    vida = vida - dano[rand.nextInt(4)];
+                    musica = 0;
+                    break;
+                case 4:
+                    vidaenemy = vidaenemy - 10;
+                    System.out.println("A musica foi fraca");
+                    vida = vida - dano[rand.nextInt(4)];
+                    musica = 0;
+                    break;
+                default:
+                    System.err.println("Valor invalido");
+            }
+        } while (vidaenemy > 0 && vida > 0 || musica > 4);
+        if (vidaenemy <= 0) {
+            System.out.println("Você derrotou a BANDA2");
+        } else if (vida <= 0) {
+            System.out.println("Sua banda foi derrotada\nGAME OVER!!!");
+           System.exit(0);
+        }
+
+        vida = 100;
+        vidaenemy = 100;
+        
+        //TERCEIRA BANDA
+        do {
+            /*System.out.println(vidaenemy);*/
+            System.out.println("\nDesafio contra BANDA3");
+            System.out.println("Vida da sua banda = " + vida);
+            System.out.println("Escolha alguma música");
+            System.out.println("1 - Forte \n2 - media \n3 - media \n4 - fraca ");
+            musica = input.nextInt();
+            switch (musica) {
+                case 1:
+                    vidaenemy = vidaenemy - 25;
+                    System.out.println("A música foi muito efetiva");
+                    vida = vida - dano[rand.nextInt(5)];
+                    musica = 0;
+                    break;
+                case 2:
+                    vidaenemy = vidaenemy - 20;
+                    System.out.println("A musica foi boa");
+                    vida = vida - dano[rand.nextInt(5)];
+                    musica = 0;
+                    break;
+                case 3:
+                    vidaenemy = vidaenemy - 20;
+                    System.out.println("A musica foi boa");
+                    vida = vida - dano[rand.nextInt(5)];
+                    musica = 0;
+                    break;
+                case 4:
+                    vidaenemy = vidaenemy - 10;
+                    System.out.println("A musica foi fraca");
+                    vida = vida - dano[rand.nextInt(5)];
+                    musica = 0;
+                    break;
+                default:
+                    System.err.println("Valor invalido");
+            }
+        } while (vidaenemy > 0 && vida > 0 || musica > 4);
+        if (vidaenemy <= 0) {
+            System.out.println("Você derrotou a BANDA3");
+        } else if (vida <= 0) {
+            System.out.println("Sua banda foi derrotada\nGAME OVER!!!");
+            System.exit(0);
+        }
+
+        System.out.println("PARABÉNS!!\nSUA BANDA FOI A CAMPEÃ DA BATALHA DE BANDAS");
+    }
+
+    //DESAFIO 8
+    static void desafio8() {
         Scanner input = new Scanner(System.in);
         int musica, gostou = 0;
         String ligacao;
-         
-        
+
         //Oitavo desafio
         System.out.println("Vocês se encontram com um empresário querendo ver uma apresentação sua!");
-        
-        do {            
+
+        do {
             System.out.println("Escolha uma música para apresentar com sua banda.");
             System.out.println("1 - musica\n2 - musica\n3 - musica\n4 - musica");
             musica = input.nextInt();
-            
+
             if (musica == 4) {
                 System.out.println("O empresário gostou da apresentação da banda");
                 gostou = 1;
@@ -1299,17 +1459,17 @@ static void desafio8() {
             }
         } while (musica > 4);
 
-        if(gostou == 1){
+        if (gostou == 1) {
             System.out.println("Você recebem uma ligação anonima deseja atender?(S/N)");
             ligacao = input.next();
-            
-            if(ligacao.equals("s") || ligacao.equals("S")  ){
+
+            if (ligacao.equals("s") || ligacao.equals("S")) {
                 System.out.println("Você descobre que a ligação erá do empresário,\ndizendo que consegiu uma vaga no rock in rio para a sua banda!");
-                
-            }else{
+
+            } else {
                 System.out.println("O rock in rio ja foi anunciado e vocês não conseguiram participar.\n Quem sabe ano que vem.");
             }
-            
+
         }
     }
 }
