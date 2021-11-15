@@ -40,7 +40,10 @@ public class Projeto1 {
 
                 switch (num) {
                     case 1:
-                        System.out.println("ESCREVER INSTRUÇÕES DO JOGO");//Escrever instruções
+                        System.out.println("The journey to rock in rio é um jogo textual onde você irá trilhar a sua jornada como músico em uma banda de rock."
+                                + " O maior desejo do grupo é se tornar uma banda de sucesso e tocar no rock in rio. "
+                                + "Para isso você terá que passar por desafios e testes durante o seu jogo, "
+                                + "escolhendo música certa para agradar ao público e batalhando contra outras bandas em festivais.");//Escrever instruções
                         break;
                     case 2:
                         jogar();
@@ -1085,15 +1088,17 @@ public class Projeto1 {
         dano[2] = 20;
         dano[3] = 25;
         dano[4] = 30;
-
-        System.out.println("----Batalha entre bandas---- ");
+        
+        System.out.println("A banda se inscreveu em um festival de batalhas de bandas.\n"
+                + "Nesse festival vocês terão que derrotar as outras bandas para poderem ganhar o prêmio.");
+        System.out.println("\n---- Batalha entre bandas ---- ");
         //PRIMEIRA BANDA
         do {
             /*System.out.println(vidaenemy);*/
-            System.out.println("\nDesafio contra BANDA1");
+            System.out.println("\n***Desafio contra Região Urbana***");
             System.out.println("Vida da sua banda = " + vida);
             System.out.println("Escolha alguma música");
-            System.out.println("1 - Forte \n2 - media \n3 - media \n4 - fraca ");
+            System.out.println("1 - Lost time \n2 - What country is this \n3 - Eduardo and Monica \n4 - Western Caboclo ");
             musica = input.nextInt();
             switch (musica) {
                 case 1:
@@ -1104,19 +1109,19 @@ public class Projeto1 {
                     break;
                 case 2:
                     vidaenemy = vidaenemy - 20;
-                    System.out.println("A musica foi boa");
+                    System.out.println("A música foi boa");
                     vida = vida - dano[rand.nextInt(4)];
                     musica = 0;
                     break;
                 case 3:
                     vidaenemy = vidaenemy - 20;
-                    System.out.println("A musica foi boa");
+                    System.out.println("A música foi boa");
                     vida = vida - dano[rand.nextInt(4)];
                     musica = 0;
                     break;
                 case 4:
                     vidaenemy = vidaenemy - 10;
-                    System.out.println("A musica foi fraca");
+                    System.out.println("A música foi fraca");
                     vida = vida - dano[rand.nextInt(4)];
                     musica = 0;
                     break;
@@ -1125,8 +1130,9 @@ public class Projeto1 {
             }
         } while (vidaenemy > 0 && vida > 0 || musica > 4);
         if (vidaenemy <= 0) {
-            System.out.println("Você derrotou a BANDA1");
+            System.out.println("***Você derrotou a Região Urbana***");
         } else if (vida <= 0) {
+            System.out.println("Vida da banda = 0");
             System.out.println("Sua banda foi derrotada\nGAME OVER!!!");
             System.exit(0);
         }
@@ -1137,33 +1143,33 @@ public class Projeto1 {
         //SEGUNDA BANDA
         do {
             /*System.out.println(vidaenemy);*/
-            System.out.println("\nDesafio contra BANDA2");
+            System.out.println("\n***Desafio contra Capital Final***");
             System.out.println("Vida da sua banda = " + vida);
             System.out.println("Escolha alguma música");
-            System.out.println("1 - Forte \n2 - media \n3 - media \n4 - fraca ");
+            System.out.println("1 - First mistakes \n2 - Do not look back \n3 - Your way \n4 - Natasha ");
             musica = input.nextInt();
             switch (musica) {
                 case 1:
-                    vidaenemy = vidaenemy - 25;
-                    System.out.println("A música foi muito efetiva");
+                    vidaenemy = vidaenemy - 20;
+                    System.out.println("A música foi boa");
                     vida = vida - dano[rand.nextInt(4)];
                     musica = 0;
                     break;
                 case 2:
-                    vidaenemy = vidaenemy - 20;
-                    System.out.println("A musica foi boa");
+                    vidaenemy = vidaenemy - 10;
+                    System.out.println("A música foi fraca");
                     vida = vida - dano[rand.nextInt(4)];
                     musica = 0;
                     break;
                 case 3:
                     vidaenemy = vidaenemy - 20;
-                    System.out.println("A musica foi boa");
+                    System.out.println("A música foi boa");
                     vida = vida - dano[rand.nextInt(4)];
                     musica = 0;
                     break;
                 case 4:
-                    vidaenemy = vidaenemy - 10;
-                    System.out.println("A musica foi fraca");
+                    vidaenemy = vidaenemy - 25;
+                    System.out.println("A música foi muito efetiva");
                     vida = vida - dano[rand.nextInt(4)];
                     musica = 0;
                     break;
@@ -1172,8 +1178,10 @@ public class Projeto1 {
             }
         } while (vidaenemy > 0 && vida > 0 || musica > 4);
         if (vidaenemy <= 0) {
-            System.out.println("Você derrotou a BANDA2");
+            System.out.println("***Você derrotou a Capital Final***");
+            System.out.println("Sua banda está na final!!");
         } else if (vida <= 0) {
+            System.out.println("Vida da banda = 0");
             System.out.println("Sua banda foi derrotada\nGAME OVER!!!");
             System.exit(0);
         }
@@ -1184,33 +1192,33 @@ public class Projeto1 {
         //TERCEIRA BANDA
         do {
             /*System.out.println(vidaenemy);*/
-            System.out.println("\nDesafio contra BANDA3");
+            System.out.println("\n***Desafio contra Os Titãs***");
             System.out.println("Vida da sua banda = " + vida);
             System.out.println("Escolha alguma música");
-            System.out.println("1 - Forte \n2 - media \n3 - media \n4 - fraca ");
+            System.out.println("1 - it is necessary to know how to live \n2 - Flowers \n3 - while there is sun \n4 - Epitaph ");
             musica = input.nextInt();
             switch (musica) {
                 case 1:
-                    vidaenemy = vidaenemy - 25;
-                    System.out.println("A música foi muito efetiva");
+                    vidaenemy = vidaenemy - 10;
+                    System.out.println("A música foi fraca");
                     vida = vida - dano[rand.nextInt(5)];
                     musica = 0;
                     break;
                 case 2:
                     vidaenemy = vidaenemy - 20;
-                    System.out.println("A musica foi boa");
+                    System.out.println("A música foi boa");
                     vida = vida - dano[rand.nextInt(5)];
                     musica = 0;
                     break;
                 case 3:
-                    vidaenemy = vidaenemy - 20;
-                    System.out.println("A musica foi boa");
+                    vidaenemy = vidaenemy - 25;
+                    System.out.println("A música foi muito efetiva");
                     vida = vida - dano[rand.nextInt(5)];
                     musica = 0;
                     break;
                 case 4:
-                    vidaenemy = vidaenemy - 10;
-                    System.out.println("A musica foi fraca");
+                    vidaenemy = vidaenemy - 20;
+                    System.out.println("A música foi boa");
                     vida = vida - dano[rand.nextInt(5)];
                     musica = 0;
                     break;
@@ -1219,14 +1227,15 @@ public class Projeto1 {
             }
         } while (vidaenemy > 0 && vida > 0 || musica > 4);
         if (vidaenemy <= 0) {
-            System.out.println("Você derrotou a BANDA3");
+            System.out.println("***Você derrotou a Os Titãs***");
         } else if (vida <= 0) {
+            System.out.println("Vida da banda = 0");
             System.out.println("Sua banda foi derrotada\nGAME OVER!!!");
             System.exit(0);
         }
 
         System.out.println("PARABÉNS!!\nSUA BANDA FOI A CAMPEÃ DA BATALHA DE BANDAS");
-        desafio8();
+        //desafio8();
     }
     
 
