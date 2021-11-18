@@ -909,7 +909,6 @@ public class Projeto1 {
 
     public static void desafio3() {
         Scanner input = new Scanner(System.in);
-
         System.out.println("DESAFIO 3");
 
         System.out.println("Parabéns por escolher o Antônio como seu empresário, ele é um dos melhores nesse ramo e tenho certeza "
@@ -917,26 +916,44 @@ public class Projeto1 {
         System.out.println("Alguns dias depois... \n");
         System.out.println("Antonio: Eu tenho uma ótima notícia para vocês! Antes de mais nada, muito obrigado por me dar o "
                 + "prívilégio de ser o empresário dessa banda!"
-                + "\n Agora vem a boa notícia: eu marquei o primeiro show de vocês,nesse show vocês iram tocar 5 músicas, "
-                + "porém prestem muita atenção na hora de escolher a música"
-                + "\n porque o público pode não gostar muito da música se for de um estilo muito diferente deles!"
-                + "\n Eu tenho as informações do público para que vocês estudem quais músicas escolher. Tô passando uma "
-                + "lista contendo : Sexo, idade e gênero de todos que compraram os ingressos e a lista de músicas"
-                + "\n =======Lista público========= \n"
-                + "\n =======Lista de Músicas ======== \n"); //Criar uma lista que com as infos do público
+                + "\n Agora vem a boa notícia: eu marquei o primeiro show de vocês,nele vocês vão tocar 5 músicas, "
+                + "porém prestem muita atenção na hora de escolher a música,"
+                + "\n porque o público pode não gostar muito da música se for de um estilo muito diferente deles!");
 
-        System.out.println("Obs: Vocês precisam dar o seu máximo para alegrar esse público, para que assim aumentem suas habilidades "
+        System.out.println("Obs: Vocês precisam dar o seu máximo para alegrar esse público, para conseguir aumentar suas habilidades "
                 + "e pontos para o jogo"
                 + "\n Abaixo está os pontos que vão conseguir de acordo com suas escolhas: \n "
                 + "\n Caso acerte 4 ou 5 músicas o público ficará feliz e cada personagem recebe 50 pontos de habilidade \n"
                 + "\n Caso acerte 2 ou 3 músicas o público ficará indifirente e cada personagem recebe 25 pontos de habilidade. \n"
                 + "\n Caso não acerte nenhuma música, ou acerte apenas 1, o público ficará triste e cada personagem perde 25 pontos! \n");
 
+        System.out.println("\n Eu tenho as informações do público para que vocês estudem quais músicas escolher. Tô passando uma "
+                + "lista contendo o genêro e idade de todos que compraram os ingressos e também a lista de músicas");
+
         int pontos = 0;
         int acertos = 0;
         int tentativas = 0;
-        
+
         do {
+            System.out.println("\n   ===========Lista público============= \n"
+                    + "   == Público total = 500 pessoas     ==\n"
+                    + "   == Genêro feminino = 200           ==\n"
+                    + "   == Genêro masculino = 300          ==\n"
+                    + "   == Nascidos entre 1960 á 1990 =450 ==\n"
+                    + "   == Nascidos entre 1990 á 2000 = 50 ==\n"
+                    + "   =====================================\n"
+                    + "\n  ==========Lista de Músicas ============ \n"
+                    + " |(1) We Are Chaos - Marilyn Manson;     |\n"
+                    + " |(2) Sweet Child o Mine - Guns N' Roses;|\n"
+                    + " |(3) Radio Ga Ga - Queen;               |\n"
+                    + " |(4) Livin on a Prayer - Bon Jovi;      |\n "
+                    + "|(5) Carnivore - Body Count;            |\n"
+                    + " |(6) Utgard - Enslaved;                 |\n"
+                    + " |(7) Nothing else metters - Metallica ; |\n"
+                    + " |(8) Manifest - Amaranthe ;             |\n"
+                    + " |(9) Smells Like Teen Spirit - Nirvana; |\n "
+                    + "|(10) Titans of Creation - Testament;   |\n "
+                    + " ========================================");
             System.out.println("Digite o número da música escolhida: ");
             int resposta = input.nextInt();
 
@@ -993,27 +1010,23 @@ public class Projeto1 {
             }
 
         } while (tentativas < 5);
-        System.out.printf("Parabens vc acertou %d músicas", acertos);
-
-
+        System.out.printf("Parabéns, você acertou %d músicas", acertos);
         if (acertos == 4 || acertos == 5) {
-            System.out.println("O público ficou feliz, sua banda recebeu mais 50 pontos!");
+            System.out.println("O público ficou feliz.Você recebeu mais 50 pontos.");
             pontos = pontos + 50;
-        } else if (acertos == 2 || acertos == 3) {
-            System.out.println("O público ficou indiferente, sua banda recebeu mais 25 pontos!");
+        } else if (acertos == 2 || acertos == 2) {
+            System.out.println("O público ficou satisfeito. Você recebeu 25 pontos.");
             pontos = pontos + 25;
-        } else if (acertos == 0 || acertos == 1) {
-            System.out.println("O público ficou triste, sua banda perdeu 25 pontos!");
+        } else {
+            System.out.println("O público ficou triste. Você perdeu 25 pontos.");
             pontos = pontos - 25;
         }
         desafio4();
     }
 
-    
-
     static void desafio4() {
         Scanner input = new Scanner(System.in);
-
+        int pontos = 0;
         System.out.println("Após o seu primeiro show você ganhou alguns fãs e "
                 + "todos eles estão seguindo a banda nas redes sociais,"
                 + "por isso seria muito bom para a banda se vocês fizessem um "
@@ -1024,7 +1037,7 @@ public class Projeto1 {
         switch (resposta) {
             case "Sim":
                 System.out.println("Graças ao vídeo sua banda ganhou mais 5 mil seguidores no Instagram"
-                        + "e 2500 inscritos no YouTube.");
+                        + "e 2500 inscritos no YouTube. Por isso você ganhou mais 25 pontos de poder!");
                 System.out.println("Além disso ainda fomos convidados para um festival que valerá +150 pontos e 3 mil reais!");
                 pontos = pontos + 25;
 
@@ -1039,37 +1052,36 @@ public class Projeto1 {
         }
 
         System.out.println("\n Dois meses depois...");
-        System.out.println("Eu: Eai pessoal todos preparados para o festival? Hoje vai ser um grande dia,"
-                + "não podemos esquecer que é uma batalha entre bandas, nós precisamos batalhar contra uma mais fraca que nós!"
+        System.out.println("Eu: Eai pessoal todos estão preparados para o festival? Hoje vai ser um grande dia,"
+                + "não podemos esquecer que é uma batalha entre bandas,por isso nós precisamos batalhar contra uma mais fraca que nós!"
                 + "Por sorte só mais 3 bandas além da nossa, irão batalhar, o restante irá apenas tocar no festival.");
         System.out.println("Antonio abre a porta do camarim: \n Opa, vim avisar que daqui 10 minutos vai começar o festival."
                 + "\n Precisamos decidir com qual banda vamos batalhar antes de irmos para o palco. "
                 + "\n Consegui um pouco de informações sobre essas bandas, olha aí a lista: "
-                + "\n (1)Banda os loucos: infos"
-                + "\n (2)Banda metalicos : infos"
-                + "\n (3)Banda assasins: infos"); // elaborar uma lista contendo informações da banda, ao ínves de mostrar os pontos dela
+                + "\n (1)Banda DeathLoops: Criada 5 anos atrás, participou de 15 festivais e em todos o público amou a banda."
+                + "\n (2)Banda Metalicos : Criada 1 ano atrás, participou de 3 festivais, e foi odiada em todos."
+                + "\n (3)Banda Assasins: Criada 3 anos atrás, participou de 6 festivais, e agradou o público em 4 deles.");
         System.out.println("Eai qual com você quer batalhar? "
                 + "\n Obs: Digite o número da banda");
         int bandarival = input.nextInt();
-        int banda1 = 1, banda2 = 2, banda3 = 3; //definir niveis de poder
+        int banda1 = 1, banda2 = 2, banda3 = 3;
 
         if (bandarival == banda1) {
-            System.out.println("Infelizmente você perdeu a batalha! Porque a banda os loucos tinham um poder de 1000!"
+            System.out.println("Infelizmente você perdeu a batalha! Porque a banda DeathLoops tinham um poder de 10000!"
                     + " Com isso seu poder diminuiu 50 pontos e você foi desclassificado da batalha.");
             pontos = pontos - 50;
 
         } else if (bandarival == banda2) {
-            System.out.println("Parábens você venceu a batalha!! A banda 2 tinha apenas 150 pontos e você ganhou mais 100 pontos de poder");
+            System.out.println("Parábens você venceu a batalha!! A banda Metálicos tinha apenas 50 pontos e você ganhou mais 100 pontos de poder");
             pontos = pontos + 100;
         } else if (bandarival == banda3) {
-            System.out.println("Infelizmente você perdeu a batalha! Porque a banda os loucos tinham um poder de 2000!"
+            System.out.println("Infelizmente você perdeu a batalha! Porque a banda Assasins tinham um poder de 3000!"
                     + "Com isso seu poder diminuiu 50 pontos e você foi desclassificado da batalha.");
         }
         //desafio5();
         desafio7();
     }
 
-    
     //DESAFIO 7    
     public static int vida = 100; //vida da banda
     public static int vidaenemy = 100; //vida do inimigo
@@ -1088,7 +1100,7 @@ public class Projeto1 {
         dano[2] = 20;
         dano[3] = 25;
         dano[4] = 30;
-        
+
         System.out.println("A banda se inscreveu em um festival de batalhas de bandas.\n"
                 + "Nesse festival vocês terão que derrotar as outras bandas para poderem ganhar o prêmio.");
         System.out.println("\n---- Batalha entre bandas ---- ");
@@ -1237,7 +1249,6 @@ public class Projeto1 {
         System.out.println("PARABÉNS!!\nSUA BANDA FOI A CAMPEÃ DA BATALHA DE BANDAS");
         //desafio8();
     }
-    
 
     //DESAFIO 8
     static void desafio8() {
