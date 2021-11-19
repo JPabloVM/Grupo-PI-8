@@ -5,7 +5,14 @@ import java.util.Scanner;
 
 public class Projeto1 {
 
+    
     static int pontos = 0;
+    static String banda; //varialvel da banda que o user escolheu
+    //DESAFIO 7    
+    static int vida = 100; //vida da banda
+    static int vidaenemy = 100; //vida do inimigo
+
+    static Random rand = new Random();
 
     public static void main(String[] args) {
 
@@ -51,7 +58,6 @@ public class Projeto1 {
                     case 3:
                         System.out.println("---INTEGRANTES DO GRUPO 8 PARA O PROJETO INTEGRADOR 1º SEMESTRE -----"
                                 + "\nIgor"
-                                + "\nLucilene"
                                 + "\nJoão Pablo"
                                 + "\nDouglas"
                                 + "\nLeo"
@@ -83,35 +89,44 @@ public class Projeto1 {
          Se o usuario digitar um dos integrantes listados o laço para e informa o integrante,
          Se digitar qualquer outro nome as opções aparecem denovo, para escolher.*/
         do {
-            System.out.println("\nTati  -  Vocalista "
-                    + "\nAkira -  Guitarra (Akira é um mestiço japonês que sofreu preconceito durante toda a sua infância,\n"
-                    + "enquanto morava em uma pequena cidade do Japão. Ao crescer, decidiu vir\n"
-                    + "para o Brasil conhecer a família de sua mãe)"
-                    + "\nJeff  -  Baixista (Jefferson, apelido Jeff teve uma infância humilde e devido ao péssimo relacionamento com os pais decidiu morar sozinho aos 18 anos.)"
-                    + "\nZeca  -  Baterista (Zeca é proprietário de uma escola de música. Tinha uma vida estável até a morte de seus pais em um acidente.)"
-                    + "\nJoão  -  Violão (Tati e órfã e foi criada pela tia.)");
+            System.out.println(
+                    "\nTati - Vocal (Desde pequena sempre gostou de música, e sempre mostrou que era uma meninda diferenciada. Logo começou a cantar, e todos em sua volta "
+                    + "\n              que ela tinha uma voz incrivel e que bem lapidado esse diamante ia logo surgi no mundo musical. Começou cantando na igreja, mas logo surgiu o gosto"
+                    + "\n              pelo estilo musical voltado mais ao rock. Depois de tantas idas e vindas ela quer uma chance para conseguir realizar um sonho que vem aumentando aos anos."
+                    + "\n\nAkira - Guitarra (Na adolescência, surgiu um grande desejo de aprender a tocar um instrumento musical, logo se encantou pela guitarra. Estudou muito, ficava noites viradas"
+                    + "\n                  para aprender a tocar logo. Hoje ele está muito experiente, e sabe tocar como poucos, um dos melhores guitarristas do Brasil."
+                    + "\n\nJefferson - Baixo (Mas conhecido como Jeff, demorou um pouco para entrar no ramo musical. A paixão dele por música fez com que ele desse uma "
+                    + "\n                   oportunidade para si mesmo, em aprender a tocar algo. Seu interesse pelo baixo, foi um pouco estranhado pelo seus amigos, "
+                    + "\n                   mas mesmo assim o apoiaram a seguir esse caminho.Hoje ele quer uma oportunidade de conseguir realizar um sonho que qualquer artista deseja)"
+                    + "\n\nZeca - Bateria (Os vizinhos não eram muitos fãs de Zeca, pois sempre ficava toacndo sua bateria dentro de casa, e o barulho era ensurdecedor. "
+                    + "\n                Seus pais então reclamavam muito, até que decidiram comprar uima bateria profissional e apoia-lo nesta caminhada. "
+                    + "\n                Dava pra ver que Zeca era diferenciado, sempre tocando nas igrejas da cidade,e em eventos, e todos diziam que o sucesso dele estava muito próximo.)"
+                    + "\n\nJoão - Violão (Sempre carregando seu violão nas costas, ia pra escola, e usava o violão como uma forma de conquistar as meninas, tocava e cantava "
+                    + "\n               para todos na sala, se tivesse aula vaga, já sabia que teria que ver joão tocando e muitas das vezes ainda tirava onda na voz também. "
+                    + "\n               Hoje ele quer conquistar algo maior, e ser reconhecido nacionalmente, e quem sabe até mundialmente");
+            System.out.println("");
 
-            System.out.println("\n Escolha um integrante:");
+            System.out.println("\n Escolha um integrante que você mais gostou e que deseja que o sonho dele(a) seja realizado:");
             integrante = jogar.nextLine();
 
             switch (integrante) {
-                case "tati":
+                case "Tati":
                     System.out.printf("Você escolheu a %s - vocalista", integrante1);// contar a história de Tati
                     desafio1();
                     return;
-                case "akira":
+                case "Akira":
                     System.out.printf("Você escolheu o %s - Guitarrista", integrante2);// contar a história de Akira
                     desafio1();
                     return;
-                case "jeff":
+                case "Jeff":
                     System.out.printf("Você escolheu o %s - Baixo", integrante3);//contar a história de Jeff
                     desafio1();
                     return;
-                case "joão":
+                case "João":
                     System.out.printf("Você escolheu o %s - Violão", integrante5);//contar a história de João
                     desafio1();
                     return;
-                case "zeca":
+                case "Zeca":
                     System.out.printf("Você escolheu o %s - Baterista", integrante4); //contar a história de zeca
                     desafio1();
                     return;
@@ -129,779 +144,893 @@ public class Projeto1 {
 
         Scanner input = new Scanner(System.in);
 
-        int banda = 0;// variavel da escolha da banda
-
+        //int escolhaBanda = 0;// variavel da escolha da banda
         String resposta1;// reposta das perguntas
 
-        System.out.println("\nQUE LEGAL VOCÊ COMEÇA HOJE A SUA CAMINHADA PARA O ROCK IN RIO"
-                + "\nMAS PARA ISSO VOCÊ PASSARA POR ALGUNS DEFAFIOS. "
-                + "\n\n-------- DESAFIO 01 ESCOLHA DA BANDA -------");
+        System.out.println("\n\nQUE LEGAL!!! VOCÊ COMEÇA HOJE A SUA CAMINHADA PARA O ROCK IN RIO."
+                + "\nMAS PARA ISSO ACONTECER, VOCÊ PASSARA POR ALGUNS DESAFIOS."
+                + "\nDESAFIOS ESTES QUE TESTARA SE VOCÊ ESTÁ PRONTO PARA ESTA JORNADA."
+                + "\nPRIMEIRO UMA ESCOLHA SIMPLES."
+                + "\n\n-------- PRIMEIRO DESAFIO É ESOLHAR UMA BANDA PARA VOCÊ ENTRAR -------");
 
-        System.out.println("\n[1] BANDA GUNS N' ROSES"
-                + "\n[2] BANDA PARALAMAS"
-                + "\n[3] BANDA CPM22" //escrever sobre as bandas
-                + "\n[4] BANDA CAPITAL INICIAL"
-                + "\n[5] BAMDA RED HOT CHILLI PEPERS"
-                + "\n ------- QUAL BANDA VOCÊ ESCOLHE??? -------");
-        banda = input.nextInt();
+        System.out.println("\n[1]BANDA The Last Wish"
+                + "\n[2] BANDA Garage Singer"
+                + "\n[3] BANDA Cheerful Dogs" //escrever sobre as bandas
+                + "\n[4] BANDA SoulFolk"
+                + "\n[5] BANDA Secretus"
+                + "\n ------- DIGITE O NOME DA BANDA QUE VOCÊ DESEJA SEGUIR NESTA CAMINHADA -------");
+        banda = input.nextLine();
 
         switch (banda) {
-            //ESCOLHA DA BANDA 1
-            case 1:
+            //ESCOLHA DA BANDA 1 - the last wish
+            case "the last wish":
                 //PRIMEIRA PERGUNTA DA BANDA 1
-                System.out.println("\n\nVocê escolheu Guns N'Roses, parabéns essa banda é muito top"
-                        + "\n mas para confirmar a sua entrada na banda você terá que responder algumas perguntas nossas" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
-                        + "\n para você poder entrar, você tera que acertar 3 respostas de 5 perguntas"
-                        + "\n---- PERGUNTA 1 -----"
-                        + "\n Quem é Gustavo Lima?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                System.out.printf("Você escolheu %s, muito bem, bela escolha."
+                        + "\nAgora vamos para mais uma etapa:"
+                        + "\n\nPara confirmar a sua entrada na banda, os integrantes decidiram realizar algumas perguntas para você, para saber" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
+                        + "\ncomo está o seu conhecimento. "
+                        + "\nvocê só vai poder entrar, se acertar 3 respostas de 5 perguntas. cada pergunta valendo 10 pontos. Precisa de apenas 30."
+                        + "FACIL NÉ? ENTÃO LET'S GO!!!!", banda);
 
-                System.out.println("Escolha a resposta certa:");
+                System.out.println("\n\n---- PERGUNTA 1 -----"
+                        + "\n\n-> POR QUE NO ROCK IN RIO TOCA OUTROS RITMOS??"
+                        + "\n(a) As bandas estão menos interessadas"
+                        + "\n(b) O público que curte rock já não contemplava toda a enormidade do evento." //resposta certa
+                        + "\n(c) Os empresários entedem que o mercado ta diferente"
+                        + "\n(d) Marcas junto com as bandas forçaram que todos estilos fossem tocados");
+
+                System.out.println("ESCOLHA A RESPOSTA CERTA:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 //SEGUNDA PERGUNTA DA PRIMEIRA BANDA
                 System.out.println("\n\n---- PERGUNTA 2 -----"
-                        + "\n Quem é Gustavo Lima?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                        + "\n QAUL O DISCO DE ROCK MAIS VENDIDO ATÉ HOJE?"
+                        + "\n(a) Rumours — Fleetwood Mac"
+                        + "\n(b) The Dark Side of the Moon — Pink Floyd"
+                        + "\n(c) Back In Black, da banda AC/DC." //resposta certa
+                        + "\n(d) Thriller — Michael Jackson ");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você acertou");
-                        pontos = pontos + 10;
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
+                        pontos = pontos + 10;
+                        break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 //TERCEIRA PERGUNTA DA PRIMEIRA BANDA
 
                 System.out.println("\n\n---- PERGUNTA 3 -----"
-                        + "\n Quem é Gustavo Lima?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                        + "\n QUAIS SÃO OS INTEGRANTES ORIGINAIS DA BANDA BEATLES?"
+                        + "\n(a) Jim Morrison, Paul McCartney ,George Harrison, John Lennon e Stu Sutcliffe"
+                        + "\n(b) John Lennon, Paul McCartney, George Harrison, Stu Sutcliffe e Peter Best" //resposta certa
+                        + "\n(c) Ringo Starr, Paul McCartney, Peter Best, Bono Vox e Mick Jagger"
+                        + "\n(d) John Lennon, Jimmy Page, Paul McCartney, Stu Sutcliffe e George Harrison");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 //QUARTA PERGUNTA DA PRIMEIRA BANDA
                 System.out.println("\n\n---- PERGUNTA 4 -----"
-                        + "\n Quem é Gustavo Lima?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                        + "\n OZZY OSBOURNE, EM UM SHOW, MORDEU A CABEÇA DE UM ANIMAL. QUE ANIMAL ERA ESSE?"
+                        + "\n(a) Ornitorrinco"
+                        + "\n(b) Rato"
+                        + "\n(c) Pombo"
+                        + "\n(d) Morcego");//resposta certa
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você acertou");
-                        pontos = pontos + 1;
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
+                        pontos = pontos + 10;
+                        break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 //QUINTA PERGUNTA DA PRIMEIRA BANDA
                 System.out.println("\n\n---- PERGUNTA 5 -----"
-                        + "\n Quem é Gustavo Lima?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                        + "\n BRUCE DICKISON, VOCALISTA DO IRON MAIDEN, TEM OUTRAS PROFISSÕES."
+                        + "\n QUAL DAS ALTERNATIVAS A SEGUIR É A QUE CONTÉM 5 PROFISSÕES DELE?"
+                        + "\n(a) Piloto de avião, esgrimista, tenor, historiador e roteirista"//resposta certa
+                        + "\n(b) Servente, engenheiro, arquiteto, mecânico e professor"
+                        + "\n(c) Médico, biólogo, dentista, advogado e juiz"
+                        + "\n(d) Astronauta, cientista, lutador, ator e pastor");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
+                        pontos = pontos + 10;
                         break;
                     case "b":
-                        System.out.println("Você acertou");
-                        pontos = pontos + 1;
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 if (pontos >= 30) {
                     System.out.println("Você fez: " + pontos + " pontos");
-                    System.out.println("PARABÉNS VOCÊ ENTROU PARA BANDA");
+                    System.out.println("PARABÉNS VOCÊ CONSEGUIU ENTRAR PARA BANDA.");
                     desafio2();
                     break;
                 } else {
-                    System.err.println("TENTE DENOVO");
+                    System.err.println("\nIH.... NÃO FOI DESTA VEZ HEIN...."
+                            + "\nTE DAREMOS MAS OUTRA OPORTUNIDADE, VE SE NÃO DESPERDIÇA.");
                     desafio1();
                 }
 
-            //ESCOLHA DA BANDA 2 - PARALAMAS
-            case 2:
+            //ESCOLHA DA BANDA 2 - garage singer
+            case "garage singer":
                 // PRIMEIRA PERGUNTA DA BANDA 2
-                System.out.println("\n\nVocê escolheu PARALAMAS, parabéns essa banda é muito top"
-                        + "\n mas para confirmar a sua entrada na banda você terá que responder algumas perguntas nossas" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
-                        + "\n para você poder entrar, você tera que acertar 3 respostas de 5 perguntas"
-                        + "\n---- PERGUNTA 01 -----"
-                        + "\n Quem é Galvão Bueno?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um narradorr"
-                        + "\n(d) Ele é um corredor");
+                 System.out.printf("Você escolheu %s, muito bem, bela escolha."
+                        + "\nAgora vamos para mais uma etapa:"
+                        + "\n\nPara confirmar a sua entrada na banda, os integrantes decidiram realizar algumas perguntas para você, para saber" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
+                        + "\ncomo está o seu conhecimento. "
+                        + "\nvocê só vai poder entrar, se acertar 3 respostas de 5 perguntas. cada pergunta valendo 10 pontos. Precisa de apenas 30."
+                        + "FACIL NÉ? ENTÃO LET'S GO!!!!", banda);
+
+                System.out.println("\n\n---- PERGUNTA 01 -----"
+                        + "\n APÓS A MORTE DE KURT COBAIN, EM 1994, DAVE GROHL FORMOU UMA BANDA EM 1995. QUE BANDA É ESSA?"
+                        + "\n(a) Kung Fu Fighter's"
+                        + "\n(b) Dave Grohl Project"
+                        + "\n(c) Foo Fighters"//resposta certa
+                        + "\n(d) Nirvana");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("PArabéns você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 // SEGUNDA PERGUNTA DA BANDA 2
                 System.out.println("\n\n---- PERGUNTA 2 -----"
-                        + "\n Quem Neymar?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                        + "\n QUEM REVOLUCIONOU O MUNDO DO ROCK COM UM GESTO?"
+                        + "\n(a) Ronnie James Dio"//resposta certa
+                        + "\n(b) Paul McCartney"
+                        + "\n(c) Jimmy Page"
+                        + "\n(d) Freddie Mercury");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 // TERCEIRA PERGUNTA DA BANDA 2
                 System.out.println("\n\n---- PERGUNTA 3 -----"
-                        + "\n Quem é Luciano Huck?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                        + "\n QUAL INTEGRANTE DO AC/DC SAIU DA BANDA E MONTOU UMA ESCOLA DE HELICOPTEROS NA NOVA ZELÂNDIA EM 1983?"
+                        + "\n(a) Bon Scott"
+                        + "\n(b) Brian Johnson"
+                        + "\n(c) Phil Rudd"//resposta certa
+                        + "\n(d) Cliff Williams");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
                         break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 // QUARTA PERGUNTA DA BANDA 2
                 System.out.println("\n\n---- PERGUNTA 4 -----"
-                        + "\n Quem é Danillo Gentili?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                        + "\n O QUE LEMMY KILMISTER FAZIA ANTES DE FUNDAR MOTORHEAD?"
+                        + "\n(a) Ele era baixista dos Rolling Stones"
+                        + "\n(b) Ele era vocalista do Led Zeppelin"
+                        + "\n(c) Ele era baterista do Black Sabbath"
+                        + "\n(d) Ele era Roadie do Jimi Hendrix");//resposta certa
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você acertou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você acertou");
-                        pontos = pontos + 10;
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
+                        pontos = pontos + 10;
                         break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 //QUINTA PERGUNTA DA BANDA 2
                 System.out.println("\n\n---- PERGUNTA 5 -----"
-                        + "\n Quem é Mrcos Mion?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                        + "\n QUAL ÁLBUM DO PINK FLOYD FOI CONSIDERADO O SEGUNDO MELHOR DE TODOS OS TEMPOS?"
+                        + "\n(a) The Wall"
+                        + "\n(b) Animals"
+                        + "\n(c) Dark Side of the Moon" //resposta certa
+                        + "\n(d) Wish You Were Here");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você acertou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
+                        break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
+                        break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 if (pontos >= 30) {
                     System.out.println("Você fez: " + pontos + " pontos");
-                    System.out.println("PARABÉNS VOCÊ ENTROU PARA BANDA");
+                    System.out.println("PARABÉNS VOCÊ CONSEGUIU ENTRAR PARA BANDA.");
                     desafio2();
                     break;
                 } else {
-                    System.err.println("TENTE DENOVO");
+                    System.err.println("\nIH.... NÃO FOI DESTA VEZ HEIN...."
+                            + "\nTE DAREMOS MAS OUTRA OPORTUNIDADE, VE SE NÃO DESPERDIÇA.");
                     desafio1();
                 }
 
-            //ESCOLHA DA BANDA 3 - CPM22
-            case 3:
+            //ESCOLHA DA BANDA 3 - cheerful dogs
+            case "cheerful dogs":
                 //PRIMEIRA PERGUNTA DA BANDA 3
-                System.out.println("\n\nVocê escolheu CPM 22, parabéns essa banda é muito top"
-                        + "\n mas para confirmar a sua entrada na banda você terá que responder algumas perguntas nossas" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
-                        + "\n para você poder entrar, você tera que acertar 3 respostas de 5 perguntas"
-                        + "\n---- PERGUNTA 01 -----"
-                        + "\n -----COMPLETE A MÚSICA----"
-                        + "\n TOMA VAGABUNDA PIROCADA DE______"
-                        + "\n(a) BANDIDO"
-                        + "\n(b) VIOLENTA"
-                        + "\n(c) SARRADA"
-                        + "\n(d) SENTADA");
+                 System.out.printf("Você escolheu %s, muito bem, bela escolha."
+                        + "\nAgora vamos para mais uma etapa:"
+                        + "\n\nPara confirmar a sua entrada na banda, os integrantes decidiram realizar algumas perguntas para você, para saber" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
+                        + "\ncomo está o seu conhecimento. "
+                        + "\nvocê só vai poder entrar, se acertar 3 respostas de 5 perguntas. cada pergunta valendo 10 pontos. Precisa de apenas 30."
+                        + "FACIL NÉ? ENTÃO LET'S GO!!!!", banda);
+
+                System.out.println("\n\n---- PERGUNTA 01 -----"
+                        + "\n M. SHADOWS É VOCALSITA DE QUAL BANDA?"
+                        + "\n(a) Avenged Sevenfold"//resposta certa
+                        + "\n(b) Guns N' Roses"
+                        + "\n(c) Angra"
+                        + "\n(d) Ramones");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
+                    case "d":
+                        System.out.println("VOCÊ ERROU!!! :(");
                     default:
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 // SEGUNDA PERGUNTA DA BANDA 3
                 System.out.println("\n\n---- PERGUNTA 2 -----"
-                        + "\n Em que ano aconteceu o ataque as torres gêmeas?"
-                        + "\n(a) 2005"
-                        + "\n(b) 2011"
-                        + "\n(c) 1998"
-                        + "\n(d) 2001");
+                        + "\n MARK HOPPUS É VOCALISTA DE QUAL BANDA?"
+                        + "\n(a) Pink Floyd"
+                        + "\n(b) Green Day"
+                        + "\n(c) The Beatles"
+                        + "\n(d) Blink-182");//resposta certa
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "d":
-                        System.out.println("Parabéns você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 // TERCEIRA PERGUNTA DA BANDA 3
                 System.out.println("\n\n---- PERGUNTA 3 -----"
-                        + "\n Que seleção foi campeã do mundo de futebol masculino em 2006?"
-                        + "\n(a) Brasil"
-                        + "\n(b) França"
-                        + "\n(c) Italia"
-                        + "\n(d) Espanha");
+                        + "\n CHESTER BENNINGTON É VOCALISTA DE QUAL BANDA?"
+                        + "\n(a) Motorhead"
+                        + "\n(b) Aerosmith"
+                        + "\n(c) Linkin Park"//resposta certa
+                        + "\n(d) Alice In Chains");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Parabéns você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 // QUARTA PERGUNTA DA BANDA 3
                 System.out.println("\n\n---- PERGUNTA 4 -----"
-                        + "\n Que continente está o Brasil?"
-                        + "\n(a) America do sul"
-                        + "\n(b) Europa"
-                        + "\n(c) America do norte"
-                        + "\n(d) Africa");
+                        + "\n SERJ TANKIAN É VOCALISTA DE QUAL BANDA?"
+                        + "\n(a) System Of a Down"//resposta certa
+                        + "\n(b) Slipknot"
+                        + "\n(c) Foo Fighters"
+                        + "\n(d) Led Zeppelin");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Parabéns você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 //QUINTA PERGUNTA DA BANDA 3
                 System.out.println("\n\n---- PERGUNTA 5 -----"
-                        + "\n Em que ano aconteceu o primeiro caso de covid no Brasil?"
-                        + "\n(a) 2019"
-                        + "\n(b) 2017"
-                        + "\n(c) 2021"
-                        + "\n(d) 2020");
+                        + "\n ANTHONY KIEDIS É VOCALISTA DE QUAL BANDA?"
+                        + "\n(a) AC/DC"
+                        + "\n(b) DragonForce"
+                        + "\n(c) Kiss"
+                        + "\n(d) Red Hot Chili Peppers");//resposta certa
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "d":
-                        System.out.println("Parabéns você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 if (pontos >= 30) {
                     System.out.println("Você fez: " + pontos + " pontos");
-                    System.out.println("PARABÉNS VOCÊ ENTROU PARA BANDA");
+                    System.out.println("PARABÉNS VOCÊ CONSEGUIU ENTRAR PARA BANDA.");
                     desafio2();
                     break;
                 } else {
-                    System.err.println("TENTE DENOVO");
+                    System.err.println("\nIH.... NÃO FOI DESTA VEZ HEIN...."
+                            + "\nTE DAREMOS MAS OUTRA OPORTUNIDADE, VE SE NÃO DESPERDIÇA.");
                     desafio1();
                 }
 
-            // ESCOLHA DA BANDA 4 - CAPITAL INICIAL 
-            case 4:
+            // ESCOLHA DA BANDA 4 - soulfolk
+            case "soulfolk":
                 //  PRIMEIRA PERGUNTA DA BANDA 4
-                System.out.println("\n\nVocê escolheu CAPITAL INICIAL, parabéns essa banda é muito top"
-                        + "\n mas para confirmar a sua entrada na banda você terá que responder algumas perguntas nossas" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
-                        + "\n para você poder entrar, você tera que acertar 3 respostas de 5 perguntas"
-                        + "\n---- PERGUNTA 01 -----"
-                        + "\n -----COMPLETE A MÚSICA----"
-                        + "\n TOMA VAGABUNDA PIROCADA DE______"
-                        + "\n(a) BANDIDO"
-                        + "\n(b) VIOLENTA"
-                        + "\n(c) SARRADA"
-                        + "\n(d) SENTADA");
+                 System.out.printf("Você escolheu %s, muito bem, bela escolha."
+                        + "\nAgora vamos para mais uma etapa:"
+                        + "\n\nPara confirmar a sua entrada na banda, os integrantes decidiram realizar algumas perguntas para você, para saber" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
+                        + "\ncomo está o seu conhecimento. "
+                        + "\nvocê só vai poder entrar, se acertar 3 respostas de 5 perguntas. cada pergunta valendo 10 pontos. Precisa de apenas 30."
+                        + "FACIL NÉ? ENTÃO LET'S GO!!!!", banda);
+
+                System.out.println("\n\n---- PERGUNTA 01 -----"
+                        + "\n QUAL BANDA AMERICANA TAMBÉM É CONHECIDA COMO THE BAD BOYS FROM BOSTON?"
+                        + "\n(a) Aerosmith"//resposta certa
+                        + "\n(b) Coldplay"
+                        + "\n(c) Journey"
+                        + "\n(d) Avenged Sevenfold");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     default:
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
+                        break;
                 }
                 // SEGUNDA PERGUNTA DA BANDA 4
                 System.out.println("\n\n---- PERGUNTA 2 -----"
-                        + "\n Em que ano aconteceu o ataque as torres gêmeas?"
-                        + "\n(a) 2005"
-                        + "\n(b) 2011"
-                        + "\n(c) 1998"
-                        + "\n(d) 2001");
+                        + "\n LÍDER QUE ESTÁ NA MEMÓRIA, QUE PARTICIPOU DA BANDA LEGIÃO URBANA?"
+                        + "\n(a) Renato Rocha"
+                        + "\n(b) Raul Seixas"
+                        + "\n(c) Samuel Rosa"
+                        + "\n(d) Renato Russo");//resposta certa
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "d":
-                        System.out.println("Parabéns você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 // TERCEIRA PERGUNTA DA BANDA 4
                 System.out.println("\n\n---- PERGUNTA 3 -----"
-                        + "\n Que seleção foi campeã do mundo de futebol masculino em 2006?"
-                        + "\n(a) Brasil"
-                        + "\n(b) França"
-                        + "\n(c) Italia"
-                        + "\n(d) Espanha");
+                        + "\n QUAL BANDA TEVE APENAS UM POUCO MAIS DE 7 MESES DE SUCESSO?"
+                        + "\n(a) Paralamas do sucesso"
+                        + "\n(b) Legião urbana"
+                        + "\n(c) Mamonas assassinas"//resposta certa
+                        + "\n(d) Nirvana");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Parabéns você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 // QUARTA PERGUNTA DA BANDA 4
                 System.out.println("\n\n---- PERGUNTA 4 -----"
-                        + "\n Que continente está o Brasil?"
-                        + "\n(a) America do sul"
-                        + "\n(b) Europa"
-                        + "\n(c) America do norte"
-                        + "\n(d) Africa");
+                        + "\n QUAL BANDA NORTE AMERICANA TAMBÉM CONHECIDA COMO A7X?"
+                        + "\n(a) Avenged Sevenfold"//resposta certa
+                        + "\n(b) The animals"
+                        + "\n(c) Led Zeppelin"
+                        + "\n(d) Rush");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Parabéns você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 //QUINTA PERGUNTA DA BANDA 4
                 System.out.println("\n\n---- PERGUNTA 5 -----"
-                        + "\n Em que ano aconteceu o primeiro caso de covid no Brasil?"
-                        + "\n(a) 2019"
-                        + "\n(b) 2017"
-                        + "\n(c) 2021"
-                        + "\n(d) 2020");
+                        + "\n QUAL O QUARTETO SAGRADO DO ROCK BRASILEIRO?"
+                        + "\n(a) Skank, Legião Urbana, Capital inicial, Barão vermelho"
+                        + "\n(b) Titãs, Paralamas do sucesso, TNT, Mamonas assassinas"
+                        + "\n(c) Legião Urbana, Barão vermelho, Mamonas assassinas, Titãs"
+                        + "\n(d) Legião urbana, Titãs, Barão Vermelho, Paralamas do sucesso");//resposta certa
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "d":
-                        System.out.println("Parabéns você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 if (pontos >= 30) {
                     System.out.println("Você fez: " + pontos + " pontos");
-                    System.out.println("PARABÉNS VOCÊ ENTROU PARA BANDA");
+                    System.out.println("PARABÉNS VOCÊ CONSEGUIU ENTRAR PARA BANDA.");
                     desafio2();
                     break;
                 } else {
-                    System.err.println("TENTE DENOVO");
+                    System.err.println("\nIH.... NÃO FOI DESTA VEZ HEIN...."
+                            + "\nTE DAREMOS MAS OUTRA OPORTUNIDADE, VE SE NÃO DESPERDIÇA.");
                     desafio1();
                 }
 
-            //ESCOLHA DA BANDA 5 - RED HOT CHILLI PEPERS
-            case 5:
+            //ESCOLHA DA BANDA 5 - secretus
+            case "secretus":
                 // PRIMEIRA PERGUNTA DA BANDA 5
-                System.out.println("\n\nVocê escolheu RED HOT CHILLI PEPERS, parabéns essa banda é muito top"
-                        + "\n mas para confirmar a sua entrada na banda você terá que responder algumas perguntas nossas" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
-                        + "\n para você poder entrar, você tera que acertar 3 respostas de 5 perguntas"
-                        + "\n---- PERGUNTA 01 -----"
-                        + "\n -----COMPLETE A MÚSICA----"
-                        + "\n TOMA VAGABUNDA PIROCADA DE______"
-                        + "\n(a) BANDIDO"
-                        + "\n(b) VIOLENTA"
-                        + "\n(c) SARRADA"
-                        + "\n(d) SENTADA");
+                 System.out.printf("Você escolheu %s, muito bem, bela escolha."
+                        + "\nAgora vamos para mais uma etapa:"
+                        + "\n\nPara confirmar a sua entrada na banda, os integrantes decidiram realizar algumas perguntas para você, para saber" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
+                        + "\ncomo está o seu conhecimento. "
+                        + "\nvocê só vai poder entrar, se acertar 3 respostas de 5 perguntas. cada pergunta valendo 10 pontos. Precisa de apenas 30."
+                        + "FACIL NÉ? ENTÃO LET'S GO!!!!", banda);
+
+                System.out.println("\n\n---- PERGUNTA 01 -----"
+                        + "\n QUAL O NOME VERDADEIRO DO VOCALISTA AXL ROSES?"
+                        + "\n(a) William Bailey"//resposta certa
+                        + "\n(b) Waters Rose"
+                        + "\n(c) Rose Waters"
+                        + "\n(d) William Marrys");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "b":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
+                        break;
+                    case "d":
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     default:
-                        System.out.println("Você errou");
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 // SEGUNDA PERGUNTA DA BANDA 5
                 System.out.println("\n\n---- PERGUNTA 2 -----"
-                        + "\n Quem é Gustavo Lima?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                        + "\n QUAL BANDA CUJA FAIXA DE ABERTURA CHAMADA SWEET LEAF É INTRODUZIDA COM UMA TOSSE?"
+                        + "\n(a) Nazareth"
+                        + "\n(b) Black Sabbath"//resposta certa
+                        + "\n(c) The Beatles"
+                        + "\n(d) Oasis");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
+                        break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
+                        break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 //TERCEIRA PERGUNTA DA BANDA 5
                 System.out.println("\n\n---- PERGUNTA 3 -----"
-                        + "\n Quem é Gustavo Lima?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                        + "\n QUAL BANDA TEM SEUS INTEGRANTES MASCARADOS?"
+                        + "\n(a) Evanescence"
+                        + "\n(b) Bon Jovi"
+                        + "\n(c) Metallica"
+                        + "\n(d) Slipknot");//resposta certa
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você acertou");
-                        pontos = pontos + 10;
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
+                        break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
+                        pontos = pontos + 10;
+                        break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
-                //QUARTA PERGUNTA DA PRIMEIRA BANDA
+                //QUARTA PERGUNTA DA BANDA 5
                 System.out.println("\n\n---- PERGUNTA 4 -----"
-                        + "\n Quem é Gustavo Lima?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                        + "\n A MÚSICA YESTARDAY PERTENCE A QUAL BANDA?"
+                        + "\n(a) Lamb of god"
+                        + "\n(b) Queens"
+                        + "\n(c) The Beatles"//resposta certa
+                        + "\n(d) Kiss");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você acertou");
-                        pontos = pontos + 10;
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
+                        pontos = pontos + 10;
+                        break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
+                        break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
-                //QUINTA PERGUNTA DA PRIMEIRA BANDA
+                //QUINTA PERGUNTA DA banda 5
                 System.out.println("\n\n---- PERGUNTA 5 -----"
-                        + "\n Quem é Gustavo Lima?"
-                        + "\n(a) Ele é um jogador"
-                        + "\n(b) Ele é um cantor sertanejo"
-                        + "\n(c) Ele é um apresentador"
-                        + "\n(d) Ele é um corredor");
+                        + "\nELA PULOU DA JANELA DO QUINTO ANDAR... É UM TRECHO DE QUAL MÚSICA E DE QUAL BANDA?"
+                        + "\n(a) Pais e Filhos do Restart"
+                        + "\n(b) Pais e Filhos do Legião Urbana"//resposta certa
+                        + "\n(c) Sangue Frio do Oficina G3"
+                        + "\n(d) Filhos e Pais do Nx Zero");
 
                 System.out.println("Escolha a resposta certa:");
                 resposta1 = input.next();
 
                 switch (resposta1) {
                     case "a":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
                         break;
                     case "b":
-                        System.out.println("Você acertou");
+                        System.out.println("ESSA RESPOSTA ESTÁ....CORRETA!!! :)");
                         pontos = pontos + 10;
                         break;
                     case "c":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
+                        break;
                     case "d":
-                        System.out.println("Você errou");
+                        System.out.println("VOCÊ ERROU!!! :(");
+                        break;
                     default:
+                        System.out.println("VOCê ERROU!!! :(");
+                        break;
                 }
                 if (pontos >= 30) {
                     System.out.println("Você fez: " + pontos + " pontos");
-                    System.out.println("PARABÉNS VOCÊ ENTROU PARA BANDA");
+                    System.out.println("PARABÉNS VOCÊ CONSEGUIU ENTRAR PARA BANDA.");
                     desafio2();
                     break;
                 } else {
-                    System.err.println("TENTE DENOVO");
+                    System.err.println("\nIH.... NÃO FOI DESTA VEZ HEIN...."
+                            + "\nTE DAREMOS MAS OUTRA OPORTUNIDADE, VE SE NÃO DESPERDIÇA.");
                     desafio1();
                 }
         }//SWITCH BANDA
     }
 
+    //DESAFIO 2
+
     static void desafio2() {
 
         Scanner desafio2 = new Scanner(System.in);
 
-        System.out.println("\n\nPARABÉNS, VOCÊ ESTÁ INDO MUITO BEM, AGORA VOCÊ ESTÁ EM OUTRO DESAFIO");
+        System.out.println("\n\nA banda está muito feliz por você ter conseguido entrar. Você se junta a outros integrantes"
+                + "\npara buscar um sonho que todos tem. A caminhada vai ser grande....BOA SORTE!!!");
 
         String empresario;
         int cont = 3;
 
-        System.out.println("\n Agora vamos escolher um empresario para seguir conosco nesta caminhada");
-        System.out.println("\n [1] Empresario - Carlos"
-                + "\n [2] Empresario - José"
-                + "\n [3] Empresario - Antonio" // ESCREVER UM PERFIRL PARA CADA EMPRESARIO
-                + "\n [4] Empresario Josue");
+        System.out.println("\n\n Agora que você ta dentro, vamos escolher um empresário para nos ajudar, nesta caminhada."
+                + "\nTem que ser um empresário muito bom, e que esteja na mesma sintonia que a banda. "
+                + "\nQue com ele, nós só vamos nos fortalecer."
+                + "\nA banda já decidiu quem será o empresário, mas sem te consultar, pois decidiram fazer mais um desafio"
+                + "\npara você, pra confirmar se você esta na mesma vibe que todos. Te daremos 3 chances, para acertar."
+                + "\nSe errar, sinto muito mas você será expulso da banda e esta grande oportunidade acaba para você"
+                + "\n\n ESTES SÃO OS EMPRESÁRIOS ↓↓↓ ");
+        System.out.println("\n\n [1] Empresário - Carlos (Um dos gigantes da música, é conhecido por transformar em ouro tudo que toca."
+                + "\n                          Estamos falando de um dos maiores empresarios do Brasil, lançou nada menos que "
+                + "\n                          mamonas assasinas para o cenário musical brasileiro.."
+                + "\n\n [2] Empresário - José (Tá fazendo muito sucesso no meio dos sertanejos, lançou muitas duplas de renome, Jorge e Matheus,"
+                + "\n                        Matheus e Kauan, Zé neto e Cristiano, entre outros... Neste ano ele decidiu mudar de estilo musical"
+                + "\n                        Hoje ele busca alguma banda para fazer sucesso. Segundo as más linguas, tem que ficar esperto com ele,"
+                + "\n                        em relação a dinheiro."
+                + "\n\n [3] Empresário - Antonio(É um empresário e produtor musical brasileiro, responsável pela fundação da Som Livre "
+                + "\n                          gravadora das Organizações Globo. Pai do cantor e compositor Cazuza, foi responsável pelo "
+                + "\n                          surgimento de vários artistas de renome no cenário da música popular brasileira." // ESCREVER UM PERFIRL PARA CADA EMPRESARIO
+                + "\n\n [4] Empresária Claudia (Empresária, compositora, arranjadora, multi-instrumentista e produtora musical brasileira, "
+                + "\n                         é uma das mais consagradas nomes da produção musical do cenário artístico do Brasil.");
 
         for (int i = 1; i <= 4; i++) {
-            System.out.println("Escolha o empersario que você acha que a banda está de acordo:");
+            System.out.println("\n\n----- Escolha o empersario que você acha que a banda está de acordo -----");
             pontos = pontos + 10; //SOMA DOS PONTOS
             empresario = desafio2.nextLine();
 
             if (empresario.equals("Antonio")) {
-                System.out.println("Essa escolha é a correta"); //ELABORAR UM TEXTO
+                System.out.println("\nAEEEE.... VOCÊ ACERTOU....PARABÉNS...SABIAMOS QUE VOCÊ NÃO IA NOS DESAPONTAR :)"); //ELABORAR UM TEXTO
                 desafio3();
                 break;
             } else {
-                System.out.println("Este empresario não é o certo");
-                System.out.println("Daremos outra oportunidade para você escolher..... Você tem " + cont-- + " chances");
+                System.out.println("\nPOXA...JURAVA QUE VOCÊ IA ACERTAR DE PRIMEIRA :(");
+                System.out.println("..... VOCÊ TEM " + cont-- + " CHANCES....");
             }
         }
 
@@ -1081,13 +1210,7 @@ public class Projeto1 {
         //desafio5();
         desafio7();
     }
-
     //DESAFIO 7    
-    public static int vida = 100; //vida da banda
-    public static int vidaenemy = 100; //vida do inimigo
-
-    public static Random rand = new Random();
-
     static void desafio7() {
         Random rand = new Random();
         Scanner input = new Scanner(System.in);
@@ -1249,7 +1372,6 @@ public class Projeto1 {
         System.out.println("PARABÉNS!!\nSUA BANDA FOI A CAMPEÃ DA BATALHA DE BANDAS");
         //desafio8();
     }
-
     //DESAFIO 8
     static void desafio8() {
         Scanner input = new Scanner(System.in);
