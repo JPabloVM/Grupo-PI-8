@@ -1216,6 +1216,497 @@ public class Projeto1 {
         desafio7();
     }
 
+      static void desafio5() {
+        
+        // Quinto desafioD
+        Scanner sc = new Scanner(System.in);
+ 
+       int ponto = 0;
+
+        System.out.println("Algumas semanas depois... \n");
+
+        System.out.println("Antônio: Pessoal vocês não vão acreditar!! Consegui uma entrevista \n"
+                + " para banda num programa de televisão, essa é uma grande oportunidade \n"
+                + " para se destacar, haverá milhares de pessoas assistindo. \n");
+
+        System.out.println("O combinado é que vocês toquem cinco músicas, e depois serão entrevistados.\n"
+                + " Pelo que me falaram a plateia tem preferência por rock dos anos 90, então vocês terão\n"
+                + " que escolher as músicas corretas para agradar a plateia. A entrevista será daqui\n "
+                + "dois dias, então já vão se preparando. \n");
+
+        System.out.println("Dois dias depois... \n");
+
+        System.out.println("Antônio: Chegou o grande dia pessoal, espero que vocês estejam preparados, \n"
+                + "vocês vão entrar no palco daqui cinco minutos. \n");
+
+        System.out.println("Assistente de palco: Está na hora da apresentação pessoal. \n");
+
+        System.out.println("Antônio: Boa sorte pessoal. \n");
+
+        System.out.println("A plateia tem preferência por rock dos anos 90, escolha a música certa para "
+                + "agradar a plateia. \n"
+                + "A banda terá que acertar no minimo três de cinco músicas para ir bem no desafio. \n");
+                
+       
+        //primeira musica
+        do{
+        System.out.println("Escolha a primeira música. \n");
+
+        System.out.println("(1)Alice In Chains - Rooster "//correta
+                + "\n(2)Slaughter To Prevail - DEMOLISHER "
+                + "\n(3)Hunger Strike - Temple Of The Dog  "
+                + "\n(4)Death - Symbolic  ");
+        int resposta1 = sc.nextInt();
+
+        switch (resposta1) {
+
+            case 1:
+                System.out.println("A plateia adorou a música, não a deixe desanimar e já escolha a próxima. \n");
+                ponto = ponto + 1;
+                break;
+
+            case 2:
+                System.out.println("A plateia detestou a música.\n");
+                break;
+
+            case 3:
+                System.out.println("A plateia detestou a música.\n");
+                break;
+
+            case 4:
+                System.out.println("A plateia detestou a música.\n");
+                break;
+                
+            default:
+               System.out.println("Você perdeu a chance de escolher uma música, preste mais atenção na próxima.\n"); 
+                }
+               
+                 
+       
+        
+        //segunda musica
+        System.out.println("Escolha a segunda música.");
+
+        System.out.println("(1)Outkast - Hey Ya!"
+                + "\n(2)Pearl Jam - Jeremy" //correta
+                + "\n(3)MC Poze do Rodo - Eu Fiz o Jogo Virar "
+                + "\n(4)Ice cube - It Was A Good Day ");
+        int resposta2 = sc.nextInt();
+
+        switch (resposta2) {
+
+            case 1:
+                System.out.println("A plateia detestou a música.\n");
+                break;
+
+            case 2:
+                System.out.println("A plateia adorou a música, não a deixe desanimar e já escolha a próxima.\n");
+                ponto= ponto + 1;
+                break;
+
+            case 3:
+                System.out.println("A plateia detestou a música.\n");
+                break;
+
+            case 4:
+                System.out.println("É uma boa música mas infelizmente a plateia odiou.\n");
+                break;
+                
+                 default:
+               System.out.println("Você perdeu a chance de escolher uma música, preste mais atenção na próxima.\n"); 
+        }
+        
+        
+        //terceira pergunta
+        System.out.println("Escolha a terceira música.");
+
+        System.out.println("(1)George Michael - Careless Whisper"
+                + "\n(2)Coolio - Gangsta's Paradise "
+                + "\n(3)Coldplay - Hymn For The Weekend"
+                + "\n(4)Alice In Chains - Man in the Box");//correta
+        int resposta3 = sc.nextInt();
+
+        switch (resposta3) {
+
+            case 1:
+                System.out.println("A plateia detestou a música.\n");
+                break;
+
+            case 2:
+                System.out.println("A plateia detestou a música.\n");
+                break;
+
+            case 3:
+                System.out.println("A plateia detestou a música.\n");
+                break;
+
+            case 4:
+                System.out.println("A plateia adorou a música, não a deixe desanimar e já escolha a próxima.\n");
+                ponto = ponto + 1;
+                break;
+                
+                 default:
+               System.out.println("Você perdeu a chance de escolher uma música, preste mais atenção na próxima.\n"); 
+        }
+        
+        //quarta pergunta
+        System.out.println("Escolha a quarta musica.");
+
+        System.out.println("(1)twenty one pilots - Ride"
+                + "\n(2)Rag'n'Bone Man - Human "
+                + "\n(3)Metallica - Nothing Else Matters " //correta
+                + "\n(4)Racionais MC's - Da ponte pra cá");
+       int resposta4 = sc.nextInt();
+
+        switch (resposta4) {
+
+            case 1:
+                System.out.println("A plateia detestou a música.\n ");
+                break;
+
+            case 2:
+                System.out.println("A plateia detestou a música.\n ");
+                break;
+
+            case 3:
+                System.out.println("A plateia adorou a música, não a deixe desanimar e já escolha a próxima. \n");
+               ponto = ponto + 1;
+               
+                break;
+
+            case 4:
+                System.out.println("Essa música é sensacional, mas infelizmente não é a música que a plateia prefere. \n");
+                break;
+                
+                 default:
+               System.out.println("Você perdeu a chance de escolher uma música, preste mais atenção na próxima.\n"); 
+        }
+        
+        //quinta pergunta
+        System.out.println("Escolha a quinta música.");
+
+        System.out.println("(1)Nirvana - Smells Like Teen Spirit " //correta
+                + "\n(2)Post Malone - Congratulations"
+                + "\n(3)FBC & VHOOR - Vem pro BAILE"
+                + "\n(4)Oliver Tree - Life Goes On");
+        int resposta5 = sc.nextInt();
+
+        switch (resposta5) {
+
+            case 1:
+                System.out.println(" A plateia adorou a música. \n");
+                ponto = ponto + 1;
+                break;
+
+            case 2:
+                System.out.println("A plateia detestou a música.\n ");
+                break;
+
+            case 3:
+                System.out.println("Essa música é sensacional, mas infelizmente não é a música que a plateia prefere.\n");
+                break;
+
+            case 4:
+                System.out.println("A plateia detestou a música.\n ");
+                break;
+                
+                 default:
+               System.out.println("Você perdeu a chance de escolher uma música.\n"); 
+        }
+       
+        if (ponto <= 2 ) {
+            System.out.println("Você foi muito mal nas escolhas das músicas, tente novamente. ");
+            
+        } else if (ponto >= 3 ) {
+            System.out.println("Parabéns!!! A plateia adorou as músicas escolhidas. ");}
+        System.out.printf("Você acertou %d músicas \n", ponto );
+           } while (ponto <= 2 );
+        
+        
+      //entrevista
+          int ponto1 = 0; 
+          System.out.println("Agora a banda será entrevistada, tente escolher as respostas certas para agradar os seus fãs. \n"); 
+          
+          
+          System.out.println("Meus parabéns, foi uma ótima apresentação, então, vamos começar a entrevista?\n");
+          System.out.println("Banda: Vamos sim!\n");
+          
+          //Primeira pergunta da entrevista
+        do{  System.out.println("Apresentador: Qual são os abjetivos futuros da banda? \n");
+          
+         System.out.println("(1)Resposta agradável."
+                 + "\n (2)Resposta esnobe.");
+         int entrevista1 = sc.nextInt();
+                 
+switch (entrevista1){
+    
+    case 1:
+        System.out.println("Resposta da banda: Uns dos nossos objetivos e continuar melhorando, para assim conseguir\n"
+                + "alcançar o nosso sonho que é tocar no Rock in Rio. \n");
+        ponto1 = ponto1 + 10;
+         break;
+         
+    case 2:
+        
+         System.out.println("Resposta da banda: Preferimos não falar sobre. \n");
+          break;
+          
+    default:
+        System.out.println("A banda preferiu não responder. \n");
+         break;
+       }
+
+//Segunda pergunta da entrevista
+ System.out.println("Apresentador: Há um bom convívio entre vocês? \n");
+          
+         System.out.println("(1)Resposta agradável."
+                 + "\n (2)Resposta esnobe.");
+         int entrevista2 = sc.nextInt();
+                 
+switch (entrevista2){
+    
+    case 1:
+        System.out.println("Resposta da banda: Nós fazemos de tudo para manter um bom convívio. \n");
+        ponto1 = ponto1 + 10;
+         break;
+         
+    case 2:
+        
+         System.out.println("Resposta da banda: Preferimos não falar sobre. \n");
+          break;
+          
+    default:
+        System.out.println("A banda preferiu não responder \n");
+         break;
+       }
+   
+//terceira pergunta da entrevista
+ System.out.println("Apresentador:Algum projeto para o futuro? E vocês tem algum recado para os fãs?\n");
+          
+         System.out.println("(1)Resposta agradável."
+                 + "\n (2)Resposta esnobe.");
+         int entrevista3 = sc.nextInt();
+                 
+switch (entrevista3){
+    
+    case 1:
+        System.out.println("Resposta da banda:Sim, temos muitos projetos pela frente, mas não podemos falar\n"
+                + " muito sobre. Nós queríamos agradecer muito ao os nossos fãs, e queria pedir que eles\n"
+                + " continuassem nos acompanhando, porquê isso incentiva muito o nosso trabalho.\n ");
+        ponto1 = ponto1 + 10;
+         break;
+         
+    case 2:
+        
+         System.out.println("Resposta da banda:Não podemos comentar sobre. Não temos nada para falar.\n");
+          break;
+          
+    default:
+        System.out.println("A banda preferiu não responder. \n");
+         break;
+         
+       } if (ponto1 <= 20) {
+            System.out.println("Apresentador: Bom, podemos ver que essa banda não e muito carismática,\n"
+                    + " mas agradeço por ter tocado no meu programa. \n");
+            System.out.println("A banda não foi muito bem na entrevista, tente novamente.");
+        } else if (ponto1 >= 30) {
+            System.out.println("Apresentador: Novamente muito obrigado, e eu gostaria de falar que vocês foram \n"
+                    + " uma das melhores bandas que já tocou no meu programa, muito obrigado mesmo. \n");
+            System.out.println("Banda: Nos que agradecemos a oportunidade, muito obrigado!! \n");
+            System.out.println("A banda foi muito bem na apresentação do programa, com isso a banda conseguiu mais \n "
+                    + "reconhecimento, agora ela está mais popular doque nunca.\n");
+        }
+        }while (ponto1 <= 2);
+        
+        } 
+      
+       static void desafio6() {
+        // sexto desafio 
+        Scanner sc = new Scanner(System.in);
+
+        int p1 = 0;
+        int ponto2 = 0;
+
+        System.out.println("Após algumas semanas da apresentação do programa, a banda ganhou muita\n"
+                + " visibilidade, e conseguiram muitos fãs.\n");
+
+        // inicio do desafio 6
+        System.out.println("Você está recebendo uma ligação, você vai atender?");
+        do {
+            System.out.println("(1)Sim.\n"
+                    + "(2)Não.\n");
+            int atender = sc.nextInt();
+
+            switch (atender) {
+
+                case 1:
+                    System.out.println("Você atendeu, era o Antônio, e tinha uma ótima notícia, ele conseguiu\n"
+                            + " um show para fora do país, vocês vão se apresentar na argentina, o show será \n"
+                            + "daqui duas semanas, então é melhor você ir se preparando. \n");
+                    p1 = p1 + 10;
+                    break;
+
+                case 2:
+                    System.out.print("Assim que você nega a ligação, o celular começa a tocar de novo, você vai atender?\n");
+                    break;
+            }
+        } while (p1 <= 9);
+
+        System.out.println("Duas semanas depois, a banda já está na argentina, prestes a entrar no palco.\n"
+                + " A plateia tem preferência por rock and roll, escolha as músicas certas para agradala, \n"
+                + "no intervalo de uma música para outra haverá o feedback da plateia.\n");
+
+        //primeira musica
+        do {
+            System.out.println("Chegou a hora do show, escolha a primeira música. \n");
+
+            System.out.println("(1)The Animals -House of the Rising Sun  "//correta
+                    + "\n(2)Bill Withers - Just the Two of Us \n");
+            int musica1 = sc.nextInt();
+
+            switch (musica1) {
+
+                case 1:
+                    System.out.println("Banda:Vocês gostaram da música!?  ");
+                    System.out.println("Plateia:SIMM!!!");
+                    System.out.println("A palteia deu um feedback positivo.\n");
+                    ponto2 = ponto2 + 10;
+                    break;
+
+                case 2:
+                    System.out.println("Banda:Vocês gostaram da música!? ");
+                    System.out.println("Plateia:NÃOOO!!! >:(");
+                    System.out.println("A palteia deu um feedback negativo, tente melhorar.\n");
+                    break;
+            }
+
+            //segunda musica
+            System.out.println("Escolha a segunda música. \n");
+
+            System.out.println("(1)Nina Simone - Feeling Good  "
+                    + "\n(2)Kiss - Heaven's on Fire"//correta
+                    + "\n(3)Cartola - Preciso me encontrar ");
+            int musica2 = sc.nextInt();
+
+            switch (musica2) {
+
+                case 1:
+                    System.out.println("Banda:Vocês gostaram da música!? ");
+                    System.out.println("Plateia:NÃOOO!!! >:(");
+                    System.out.println("A palteia deu um feedback negativo, tente melhorar.\n");
+                    break;
+
+                case 2:
+                    System.out.println("Banda:Vocês gostaram da música!?  ");
+                    System.out.println("Plateia:SIMM!!!");
+                    System.out.println("A palteia deu um feedback positivo.\n");
+                    ponto2 = ponto2 + 10;
+                    break;
+
+                case 3:
+                    System.out.println("Banda:Vocês gostaram da música!? ");
+                    System.out.println("Plateia:NÃOOO!!! >:(");
+                    System.out.println("A palteia deu um feedback negativo, tente melhorar.\n");
+                    break;
+            }
+
+            //tercerira musica
+            System.out.println("Escolha a terceira música. \n");
+
+            System.out.println("(1)James Brown - It's A Man's World "
+                    + "\n(2)Roy Orbison - Oh, Pretty Woman "
+                    + "\n(3)Paul Anka - Put Your Head on My Shouder"
+                    + "\n(4)The Beatles - Let It Be ");//correta
+            int musica3 = sc.nextInt();
+
+            switch (musica3) {
+
+                case 1:
+                    System.out.println("Banda:Vocês gostaram da música!? ");
+                    System.out.println("Plateia:NÃOOO!!! >:(");
+                    System.out.println("A palteia deu um feedback negativo, tente melhorar.\n");
+                    break;
+
+                case 2:
+                    System.out.println("Banda:Vocês gostaram da música!? ");
+                    System.out.println("Plateia:NÃOOO!!! >:(");
+                    System.out.println("A palteia deu um feedback negativo, tente melhorar.\n");
+                    break;
+
+                case 3:
+                    System.out.println("Banda:Vocês gostaram da música!? ");
+                    System.out.println("Plateia:NÃOOO!!! >:(");
+                    System.out.println("A palteia deu um feedback negativo, tente melhorar.\n");
+                    break;
+
+                case 4:
+                    System.out.println("Banda:Vocês gostaram da música!?  ");
+                    System.out.println("Plateia:SIMM!!!");
+                    System.out.println("A palteia deu um feedback positivo.\n");
+                    ponto2 = ponto2 + 10;
+                    break;
+            }
+            
+            // quarta musica
+            System.out.println("Escolha a quarta música. \n");
+
+            System.out.println("(1)The Crows - Time and Time Again "//correta
+                    + "\n(2)Roddy Ricch - Down Below"
+                    + "\n(3)The police - Every Breath You Take"
+                    + "\n(4)MC Kauan - Mestre das fugas "
+                    + "\n(5)Yunk vino - Leans");
+            int musica4 = sc.nextInt();
+
+            switch (musica4) {
+
+                case 1:
+                    System.out.println("Banda:Vocês gostaram da música!?  ");
+                    System.out.println("Plateia:SIMM!!!");
+                    System.out.println("A palteia deu um feedback positivo.\n");
+                    ponto2 = ponto2 + 10;
+                    break;
+
+                case 2:
+                    System.out.println("Banda:Vocês gostaram da música!? ");
+                    System.out.println("Plateia:NÃOOO!!! >:(");
+                    System.out.println("A palteia deu um feedback negativo, tente melhorar.\n");
+                    break;
+
+                case 3:
+                    System.out.println("Banda:Vocês gostaram da música!? ");
+                    System.out.println("Plateia:NÃOOO!!! >:(");
+                    System.out.println("A palteia deu um feedback negativo, tente melhorar.\n");
+                    break;
+
+                case 4:
+                    System.out.println("Banda:Vocês gostaram da música!? ");
+                    System.out.println("Plateia:NÃOOO!!! >:(");
+                    System.out.println("A palteia deu um feedback negativo, tente melhorar.\n");
+                    break;
+
+                case 5:
+                    System.out.println("Banda:Vocês gostaram da música!? ");
+                    System.out.println("Plateia:NÃOOO!!! >:(");
+                    System.out.println("A palteia deu um feedback negativo.\n");
+                    break;
+            }
+
+            if (ponto2 == 10) {
+                System.out.println("A banda não foi muito bem nesse show, tente novamente. \n");
+
+            } else if (ponto2 == 20) {
+                System.out.println("A banda se saiu muito bem, mas poderia ter sido melhor. A plateia ficou satisfeita "
+                        + "com a performance.");
+
+            } else if (ponto2 == 30) {
+                System.out.println("O show foi ótimo, mas poderia ter sido melhor. A plateia ficou satisfeita com a "
+                        + "performance, a banda ganhou novos fãs.");
+
+            } else if (ponto2 == 40) {
+                System.out.println("O SHOW FOI INCRIVEL!! Todos da plateia amaram, a banda ganhou muitos fãs.");
+            }
+        } while (ponto2 <= 10);
+    } 
     //DESAFIO 7    
     static void desafio7() {
 
