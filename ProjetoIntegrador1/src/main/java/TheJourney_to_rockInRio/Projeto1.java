@@ -47,9 +47,9 @@ public class Projeto1 {
                 switch (num) {
                     case 1:
                         System.out.println("The journey to rock in rio é um jogo textual onde você irá trilhar a sua jornada como músico em uma banda de rock."
-                                + " O maior desejo do grupo é se tornar uma banda de sucesso e tocar no rock in rio. "
-                                + "Para isso você terá que passar por desafios e testes durante o seu jogo, "
-                                + "escolhendo música certa para agradar ao público e batalhando contra outras bandas em festivais.");//Escrever instruções
+                                + "\nO maior desejo do grupo é se tornar uma banda de sucesso e tocar no rock in rio. "
+                                + "\nPara isso você terá que passar por desafios e testes durante o seu jogo, "
+                                + "\nescolhendo música certa para agradar ao público e batalhando contra outras bandas em festivais.\n");//Escrever instruções
                         break;
                     case 2:
                         jogar();
@@ -57,11 +57,11 @@ public class Projeto1 {
                         break;
                     case 3:
                         System.out.println("---INTEGRANTES DO GRUPO 8 PARA O PROJETO INTEGRADOR 1º SEMESTRE -----"
-                                + "\nIgor"
-                                + "\nJoão Pablo"
-                                + "\nDouglas"
-                                + "\nLeo"
-                                + "\nGabriel");
+                                + "\nIgor Oliveira"
+                                + "\nJoão Pablo Vilanir de Melo"
+                                + "\nDouglas Alves Angelo"
+                                + "\nLeonardo Sousa Pereira"
+                                + "\nGabriel Albuquerque");
                         break;
                     default:
                         System.out.println("Você saiu do jogo");
@@ -1043,6 +1043,7 @@ public class Projeto1 {
 
     public static void desafio3() {
         Scanner input = new Scanner(System.in);
+
         System.out.println("DESAFIO 3");
 
         System.out.println("Parabéns por escolher o Antônio como seu empresário, ele é um dos melhores nesse ramo e tenho certeza "
@@ -1064,7 +1065,6 @@ public class Projeto1 {
         System.out.println("\n Eu tenho as informações do público para que vocês estudem quais músicas escolher. Tô passando uma "
                 + "lista contendo o genêro e idade de todos que compraram os ingressos \n e também a lista de músicas");
 
-        int pontos = 0;
         int acertos = 0;
         int tentativas = 0;
 
@@ -1160,7 +1160,7 @@ public class Projeto1 {
 
     static void desafio4() {
         Scanner input = new Scanner(System.in);
-        int pontos = 0;
+
         System.out.println("Após o seu primeiro show você ganhou alguns fãs e "
                 + "todos eles estão seguindo a banda nas redes sociais,"
                 + "por isso seria muito bom para a banda se vocês fizessem um "
@@ -1218,7 +1218,7 @@ public class Projeto1 {
 
     //DESAFIO 7    
     static void desafio7() {
-        Random rand = new Random();
+
         Scanner input = new Scanner(System.in);
         int musica, aleatorio;
 
@@ -1229,7 +1229,7 @@ public class Projeto1 {
         dano[2] = 20;
         dano[3] = 25;
         dano[4] = 30;
-        
+
         System.out.println("\nA banda se inscreveu em um festival de batalhas de bandas.\n"
                 + "Nesse festival vocês terão que derrotar as outras bandas para poderem ganhar o prêmio.");
         System.out.println("\n===== Batalha entre bandas =====");
