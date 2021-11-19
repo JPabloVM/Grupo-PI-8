@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Projeto1 {
 
-    
     static int pontos = 0;
     static String banda; //varialvel da banda que o user escolheu
     //DESAFIO 7    
@@ -54,6 +53,7 @@ public class Projeto1 {
                         break;
                     case 2:
                         jogar();
+
                         break;
                     case 3:
                         System.out.println("---INTEGRANTES DO GRUPO 8 PARA O PROJETO INTEGRADOR 1º SEMESTRE -----"
@@ -111,22 +111,28 @@ public class Projeto1 {
 
             switch (integrante) {
                 case "Tati":
+                case "tati":
                     System.out.printf("Você escolheu a %s - vocalista", integrante1);// contar a história de Tati
                     desafio1();
                     return;
                 case "Akira":
+                case "akira":
                     System.out.printf("Você escolheu o %s - Guitarrista", integrante2);// contar a história de Akira
                     desafio1();
                     return;
                 case "Jeff":
+                case "jeff":
                     System.out.printf("Você escolheu o %s - Baixo", integrante3);//contar a história de Jeff
                     desafio1();
                     return;
                 case "João":
+                case "joao":
+                case "joão":
                     System.out.printf("Você escolheu o %s - Violão", integrante5);//contar a história de João
                     desafio1();
                     return;
                 case "Zeca":
+                case "zeca":
                     System.out.printf("Você escolheu o %s - Baterista", integrante4); //contar a história de zeca
                     desafio1();
                     return;
@@ -332,7 +338,7 @@ public class Projeto1 {
             //ESCOLHA DA BANDA 2 - garage singer
             case "garage singer":
                 // PRIMEIRA PERGUNTA DA BANDA 2
-                 System.out.printf("Você escolheu %s, muito bem, bela escolha."
+                System.out.printf("Você escolheu %s, muito bem, bela escolha."
                         + "\nAgora vamos para mais uma etapa:"
                         + "\n\nPara confirmar a sua entrada na banda, os integrantes decidiram realizar algumas perguntas para você, para saber" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
                         + "\ncomo está o seu conhecimento. "
@@ -497,7 +503,7 @@ public class Projeto1 {
             //ESCOLHA DA BANDA 3 - cheerful dogs
             case "cheerful dogs":
                 //PRIMEIRA PERGUNTA DA BANDA 3
-                 System.out.printf("Você escolheu %s, muito bem, bela escolha."
+                System.out.printf("Você escolheu %s, muito bem, bela escolha."
                         + "\nAgora vamos para mais uma etapa:"
                         + "\n\nPara confirmar a sua entrada na banda, os integrantes decidiram realizar algumas perguntas para você, para saber" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
                         + "\ncomo está o seu conhecimento. "
@@ -661,7 +667,7 @@ public class Projeto1 {
             // ESCOLHA DA BANDA 4 - soulfolk
             case "soulfolk":
                 //  PRIMEIRA PERGUNTA DA BANDA 4
-                 System.out.printf("Você escolheu %s, muito bem, bela escolha."
+                System.out.printf("Você escolheu %s, muito bem, bela escolha."
                         + "\nAgora vamos para mais uma etapa:"
                         + "\n\nPara confirmar a sua entrada na banda, os integrantes decidiram realizar algumas perguntas para você, para saber" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
                         + "\ncomo está o seu conhecimento. "
@@ -823,7 +829,7 @@ public class Projeto1 {
             //ESCOLHA DA BANDA 5 - secretus
             case "secretus":
                 // PRIMEIRA PERGUNTA DA BANDA 5
-                 System.out.printf("Você escolheu %s, muito bem, bela escolha."
+                System.out.printf("Você escolheu %s, muito bem, bela escolha."
                         + "\nAgora vamos para mais uma etapa:"
                         + "\n\nPara confirmar a sua entrada na banda, os integrantes decidiram realizar algumas perguntas para você, para saber" // MELHORAR MAIS ESSE TEXTO, PARA FICAR MAIS EXPLICATIVO, OU INSERIR MAIS COISAS
                         + "\ncomo está o seu conhecimento. "
@@ -988,7 +994,6 @@ public class Projeto1 {
     }
 
     //DESAFIO 2
-
     static void desafio2() {
 
         Scanner desafio2 = new Scanner(System.in);
@@ -1057,7 +1062,7 @@ public class Projeto1 {
                 + "\n Caso não acerte nenhuma música, ou acerte apenas 1, o público ficará triste e cada personagem perde 25 pontos! \n");
 
         System.out.println("\n Eu tenho as informações do público para que vocês estudem quais músicas escolher. Tô passando uma "
-                + "lista contendo o genêro e idade de todos que compraram os ingressos e também a lista de músicas");
+                + "lista contendo o genêro e idade de todos que compraram os ingressos \n e também a lista de músicas");
 
         int pontos = 0;
         int acertos = 0;
@@ -1159,7 +1164,7 @@ public class Projeto1 {
         System.out.println("Após o seu primeiro show você ganhou alguns fãs e "
                 + "todos eles estão seguindo a banda nas redes sociais,"
                 + "por isso seria muito bom para a banda se vocês fizessem um "
-                + "vídeo para o YouTube e Instagram falando um pouco sobre como foi o show!");
+                + "vídeo para o YouTube \n e Instagram falando um pouco sobre como foi o show!");
         System.out.println("Você irá fazer o vídeo? \n Obs: Responda com sim ou não!");
         String resposta = input.nextLine();
 
@@ -1182,7 +1187,7 @@ public class Projeto1 {
 
         System.out.println("\n Dois meses depois...");
         System.out.println("Eu: Eai pessoal todos estão preparados para o festival? Hoje vai ser um grande dia,"
-                + "não podemos esquecer que é uma batalha entre bandas,por isso nós precisamos batalhar contra uma mais fraca que nós!"
+                + "não podemos esquecer que é uma batalha entre bandas,por isso nós precisamos batalhar contra uma mais \n fraca que nós!"
                 + "Por sorte só mais 3 bandas além da nossa, irão batalhar, o restante irá apenas tocar no festival.");
         System.out.println("Antonio abre a porta do camarim: \n Opa, vim avisar que daqui 10 minutos vai começar o festival."
                 + "\n Precisamos decidir com qual banda vamos batalhar antes de irmos para o palco. "
@@ -1210,6 +1215,7 @@ public class Projeto1 {
         //desafio5();
         desafio7();
     }
+
     //DESAFIO 7    
     static void desafio7() {
         Random rand = new Random();
@@ -1370,8 +1376,9 @@ public class Projeto1 {
         }
 
         System.out.println("PARABÉNS!!\nSUA BANDA FOI A CAMPEÃ DA BATALHA DE BANDAS");
-        //desafio8();
+        desafio8();
     }
+
     //DESAFIO 8
     static void desafio8() {
         Scanner input = new Scanner(System.in);
