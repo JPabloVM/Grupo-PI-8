@@ -1229,15 +1229,17 @@ public class Projeto1 {
         dano[2] = 20;
         dano[3] = 25;
         dano[4] = 30;
-
-        System.out.println("A banda se inscreveu em um festival de batalhas de bandas.\n"
+        
+        System.out.println("\nA banda se inscreveu em um festival de batalhas de bandas.\n"
                 + "Nesse festival vocês terão que derrotar as outras bandas para poderem ganhar o prêmio.");
-        System.out.println("\n---- Batalha entre bandas ---- ");
+        System.out.println("\n===== Batalha entre bandas =====");
+        System.out.println("Você tem que fazer a vida da banda adversaria chegar a 0 antes da sua,\n"
+                + "para isso use as 4 músicas para causar dano e vencer o adversario. ");
         //PRIMEIRA BANDA
         do {
             /*System.out.println(vidaenemy);*/
             System.out.println("\n***Desafio contra Região Urbana***");
-            System.out.println("Vida da sua banda = " + vida);
+            System.out.println("Vida da sua banda = " + vida + " | Vida da banda inimiga = " + vidaenemy);
             System.out.println("Escolha alguma música");
             System.out.println("1 - Lost time \n2 - What country is this \n3 - Eduardo and Monica \n4 - Western Caboclo ");
             musica = input.nextInt();
@@ -1273,7 +1275,7 @@ public class Projeto1 {
         if (vidaenemy <= 0) {
             System.out.println("***Você derrotou a Região Urbana***");
         } else if (vida <= 0) {
-            System.out.println("Vida da banda = 0");
+            System.out.println("Vida da sua banda = 0");
             System.out.println("Sua banda foi derrotada\nGAME OVER!!!");
             System.exit(0);
         }
@@ -1285,7 +1287,7 @@ public class Projeto1 {
         do {
             /*System.out.println(vidaenemy);*/
             System.out.println("\n***Desafio contra Capital Final***");
-            System.out.println("Vida da sua banda = " + vida);
+            System.out.println("Vida da sua banda = " + vida + " | Vida da banda inimiga = " + vidaenemy);
             System.out.println("Escolha alguma música");
             System.out.println("1 - First mistakes \n2 - Do not look back \n3 - Your way \n4 - Natasha ");
             musica = input.nextInt();
@@ -1322,7 +1324,7 @@ public class Projeto1 {
             System.out.println("***Você derrotou a Capital Final***");
             System.out.println("Sua banda está na final!!");
         } else if (vida <= 0) {
-            System.out.println("Vida da banda = 0");
+            System.out.println("Vida da sua banda = 0");
             System.out.println("Sua banda foi derrotada\nGAME OVER!!!");
             System.exit(0);
         }
@@ -1334,7 +1336,7 @@ public class Projeto1 {
         do {
             /*System.out.println(vidaenemy);*/
             System.out.println("\n***Desafio contra Os Titãs***");
-            System.out.println("Vida da sua banda = " + vida);
+            System.out.println("Vida da sua banda = " + vida + " | Vida da banda inimiga = " + vidaenemy);
             System.out.println("Escolha alguma música");
             System.out.println("1 - it is necessary to know how to live \n2 - Flowers \n3 - while there is sun \n4 - Epitaph ");
             musica = input.nextInt();
@@ -1370,12 +1372,12 @@ public class Projeto1 {
         if (vidaenemy <= 0) {
             System.out.println("***Você derrotou a Os Titãs***");
         } else if (vida <= 0) {
-            System.out.println("Vida da banda = 0");
+            System.out.println("Vida da sua banda = 0");
             System.out.println("Sua banda foi derrotada\nGAME OVER!!!");
             System.exit(0);
         }
 
-        System.out.println("PARABÉNS!!\nSUA BANDA FOI A CAMPEÃ DA BATALHA DE BANDAS");
+        System.out.println("==== PARABÉNS ====\nSUA BANDA FOI A CAMPEÃ DA BATALHA DE BANDAS.");
         desafio8();
     }
 
