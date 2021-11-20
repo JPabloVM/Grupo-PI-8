@@ -1062,87 +1062,170 @@ public class Projeto1 {
                 + "\n Caso não acerte nenhuma música, ou acerte apenas 1, o público ficará triste e cada personagem perde 25 pontos! \n");
 
         System.out.println("\n Eu tenho as informações do público para que vocês estudem quais músicas escolher. Tô passando uma "
-                + "lista contendo o genêro e idade de todos que compraram os ingressos \n e também a lista de músicas");
+                + "lista contendo o genêro e idade de todos que compraram os ingressos e também a lista de músicas");
+
+        System.out.println("\n   ===========Lista público============= \n"
+                + "   == Público total = 500 pessoas     ==\n"
+                + "   == Genêro feminino = 200           ==\n"
+                + "   == Genêro masculino = 300          ==\n"
+                + "   == Nascidos entre 1960 á 1990 =450 ==\n"
+                + "   == Nascidos entre 1990 á 2000 = 50 ==\n"
+                + "   =====================================\n"
+                + "\n  ==========Lista de Músicas ============ \n"
+                + " |(A) We Are Chaos - Marilyn Manson;     |\n"
+                + " |(B) Sweet Child o Mine - Guns N' Roses;|\n"
+                + "  =======================================");
 
         int acertos = 0;
         int tentativas = 0;
 
-        do {
-            System.out.println("\n   ===========Lista público============= \n"
-                    + "   == Público total = 500 pessoas     ==\n"
-                    + "   == Genêro feminino = 200           ==\n"
-                    + "   == Genêro masculino = 300          ==\n"
-                    + "   == Nascidos entre 1960 á 1990 =450 ==\n"
-                    + "   == Nascidos entre 1990 á 2000 = 50 ==\n"
-                    + "   =====================================\n"
-                    + "\n  ==========Lista de Músicas ============ \n"
-                    + " |(1) We Are Chaos - Marilyn Manson;     |\n"
-                    + " |(2) Sweet Child o Mine - Guns N' Roses;|\n"
-                    + " |(3) Radio Ga Ga - Queen;               |\n"
-                    + " |(4) Livin on a Prayer - Bon Jovi;      |\n "
-                    + "|(5) Carnivore - Body Count;            |\n"
-                    + " |(6) Utgard - Enslaved;                 |\n"
-                    + " |(7) Nothing else metters - Metallica ; |\n"
-                    + " |(8) Manifest - Amaranthe ;             |\n"
-                    + " |(9) Smells Like Teen Spirit - Nirvana; |\n "
-                    + "|(10) Titans of Creation - Testament;   |\n "
-                    + " ========================================");
-            System.out.println("Digite o número da música escolhida: ");
-            int resposta = input.nextInt();
+        System.out.println("Digite a letra da primeira música escolhida: ");
+        String resposta = input.next();
 
-            while (resposta > 0 && resposta < 11) {
-                if (resposta == 1) {
-                    System.out.println("O público não gostou dessa música!");
-                    tentativas++;
-                    break;
-                } else if (resposta == 2) {
-                    System.out.println("O público amou essa música!");
-                    acertos++;
-                    tentativas++;
-                    break;
-                } else if (resposta == 3) {
-                    System.out.println("O público gostou essa música!");
-                    acertos++;
-                    tentativas++;
-                    break;
-                } else if (resposta == 4) {
-                    System.out.println("O público gostou essa música!");
-                    acertos++;
-                    tentativas++;
-                    break;
-                } else if (resposta == 5) {
-                    System.out.println("O público não gostou essa música!");
+        char resposta1 = resposta.charAt(0);
 
-                    tentativas++;
-                    break;
-                } else if (resposta == 6) {
-                    System.out.println("O público não gostou essa música!");
+        switch (resposta1) {
 
-                    tentativas++;
-                    break;
-                } else if (resposta == 7) {
-                    System.out.println("O público gostou essa música!");
-                    acertos++;
-                    tentativas++;
-                    break;
-                } else if (resposta == 8) {
-                    System.out.println("O público não gostou essa música!");
+            case 'a':
+            case 'A':
+                System.out.println("O público não gostou dessa música!");
 
-                    tentativas++;
-                    break;
-                } else if (resposta == 9) {
-                    System.out.println("O público gostou essa música!");
-                    acertos++;
-                    tentativas++;
-                    break;
-                } else if (resposta == 10) {
-                    System.out.println("O público não gostou essa música!");
-                    tentativas++;
-                    break;
-                }
-            }
+                break;
+            case 'b':
+            case 'B':
+                System.out.println("O público amou essa música! \n");
 
-        } while (tentativas < 5);
+                acertos++;
+                break;
+            default:
+                System.out.println("Opção inválida!");
+        }
+
+        System.out.println("\n   ===========Lista público============= \n"
+                + "   == Público total = 500 pessoas     ==\n"
+                + "   == Genêro feminino = 200           ==\n"
+                + "   == Genêro masculino = 300          ==\n"
+                + "   == Nascidos entre 1960 á 1990 =450 ==\n"
+                + "   == Nascidos entre 1990 á 2000 = 50 ==\n"
+                + "   =====================================\n"
+                + "\n  ==========Lista de Músicas ============ \n"
+                + " |(A) Radio Ga Ga - Queen;               |\n"
+                + " |(B) Carnivore - Body Count;            |\n "
+                + " =======================================");
+
+        System.out.println("Digite a letra da segunda música escolhida: ");
+        resposta = input.next();
+        char resposta2 = resposta.charAt(0);
+
+        switch (resposta2) {
+            case 'a':
+            case 'A':
+                System.out.println("O público gostou essa música! \n");
+                acertos++;
+                break;
+
+            case 'b':
+            case 'B':
+                System.out.println("O público não gostou dessa música! \n");
+
+                break;
+        }
+        System.out.println("\n   ===========Lista público============= \n"
+                + "   == Público total = 500 pessoas     ==\n"
+                + "   == Genêro feminino = 200           ==\n"
+                + "   == Genêro masculino = 300          ==\n"
+                + "   == Nascidos entre 1960 á 1990 =450 ==\n"
+                + "   == Nascidos entre 1990 á 2000 = 50 ==\n"
+                + "   =====================================\n"
+                + "\n  ==========Lista de Músicas ============ \n"
+                + " |(A) Livin on a Prayer - Bon Jovi;      |\n"
+                + " |(B) Utgard - Enslaved;                 |\n"
+                + "  =======================================");
+
+        System.out.println("Digite a letra da terceira música escolhida: ");
+        resposta = input.next();
+        char resposta3 = resposta.charAt(0);
+
+        switch (resposta3) {
+            case 'a':
+            case 'A':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'b':
+            case 'B':
+                System.out.println("O público não gostou dessa música! \n");
+
+                break;
+            default:
+                System.out.println("Opção inválida!");
+        }
+
+        System.out.println("\n   ===========Lista público============= \n"
+                + "   == Público total = 500 pessoas     ==\n"
+                + "   == Genêro feminino = 200           ==\n"
+                + "   == Genêro masculino = 300          ==\n"
+                + "   == Nascidos entre 1960 á 1990 =450 ==\n"
+                + "   == Nascidos entre 1990 á 2000 = 50 ==\n"
+                + "   =====================================\n"
+                + "\n  ==========Lista de Músicas ============ \n"
+                + " |(A) Nothing else metters - Metallica ; |\n"
+                + " |(B) Manifest - Amaranthe ;             |\n"
+                + "  =======================================");
+
+        System.out.println("Digite a letra da quarta música escolhida: ");
+        resposta = input.next();
+        char resposta4 = resposta.charAt(0);
+
+        switch (resposta4) {
+            case 'a':
+            case 'A':
+                System.out.println("O público não gostou dessa música! \n");
+
+                break;
+
+            case 'b':
+            case 'B':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+            default:
+                System.out.println("Opção inválida!");
+        }
+        System.out.println("\n   ===========Lista público============= \n"
+                + "   == Público total = 500 pessoas     ==\n"
+                + "   == Genêro feminino = 200           ==\n"
+                + "   == Genêro masculino = 300          ==\n"
+                + "   == Nascidos entre 1960 á 1990 =450 ==\n"
+                + "   == Nascidos entre 1990 á 2000 = 50 ==\n"
+                + "   =====================================\n"
+                + "\n  ==========Lista de Músicas =========== \n"
+                + " |(A) Smells Like Teen Spirit - Nirvana;|\n "
+                + "|(B) Titans of Creation - Testament;   |\n "
+                + " ======================================");
+
+        System.out.println("Digite a letra da terceira música escolhida: ");
+        resposta = input.next();
+        char resposta5 = resposta.charAt(0);
+
+        switch (resposta5) {
+            case 'a':
+            case 'A':
+                System.out.println("O público gostou dessa música! \n");
+                acertos++;
+                break;
+
+            case 'b':
+            case 'B':
+                System.out.println("O público não gostou dessa música! \n");
+
+                break;
+            default:
+                System.out.println("Opção inválida!");
+        }
+
+        int pontos = 0;
         System.out.printf("Parabéns, você acertou %d músicas", acertos);
         if (acertos == 4 || acertos == 5) {
             System.out.println("O público ficou feliz.Você recebeu mais 50 pontos.");
@@ -1153,6 +1236,7 @@ public class Projeto1 {
         } else {
             System.out.println("O público ficou triste. Você perdeu 25 pontos.");
             pontos = pontos - 25;
+
         }
         desafio4();
     }
