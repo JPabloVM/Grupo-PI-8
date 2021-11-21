@@ -53,6 +53,7 @@ public class Projeto1 {
                         break;
                     case 2:
                         jogar();
+                        
                         break;
                     case 3:
                         System.out.println("---INTEGRANTES DO GRUPO 8 PARA O PROJETO INTEGRADOR 1º SEMESTRE -----"
@@ -1786,7 +1787,6 @@ public class Projeto1 {
         } while (ponto2 <= 10);
         desafio7();
     }
-
     //DESAFIO 7    
     static void desafio7() {
 
@@ -1951,7 +1951,6 @@ public class Projeto1 {
         System.out.println("==== PARABÉNS ====\nSUA BANDA FOI A CAMPEÃ DA BATALHA DE BANDAS.");
         desafio8();
     }
-
     //DESAFIO 8
     static void desafio8() {
         Scanner input = new Scanner(System.in);
@@ -1959,15 +1958,27 @@ public class Projeto1 {
         String ligacao;
 
         //Oitavo desafio
-        System.out.println("Vocês se encontram com um empresário querendo ver uma apresentação sua!");
+        System.out.println("\nA banda foi convidada para tocar em um evento, onde estará Roberto Medina."
+                + "\n       Ele que é um empresário que é um dos fundadores do Rock In-Rio. Então será uma oportunidade única"
+                + "\n         será um grande desafio. A banda terá que escolher a música predileta para tocar. Assim Roberto Medina"
+                + "\n       ficara satisfeito e ele podera nos ajudar a chegar no nosso grande sonho.");
 
         do {
-            System.out.println("Escolha uma música para apresentar com sua banda.");
-            System.out.println("1 - musica\n2 - musica\n3 - musica\n4 - musica");
+            System.out.println("\n Aqui em baixo está uma lista de 3 músicas, uma delas é a que Roberto Medina está aguardando"
+                    + "\n       ser tocada. É uma música que pode tocar o coração dele. Então faça a escolha certa. Pois nosso futuro"
+                    + "\n       dependera muito disso para o começo do sucesso. Em uma entrevista com o mesmo comentou sobre o Rock in Rio"
+                    + "\n       o mesmo falou:"
+                    + "\n       Cidade do Rock - \"É onde habito, onde coloco em prática tudo o que eu quero para o Rio de Janeiro. "
+                    + "\n       Sou perfeccionista e cuido de cada detalhe desta \"cidade\".\"");
+            System.out.println("\n1  Queen - Love Of My Life"
+                    + "\n         2 - James Taylor - Only a Dream in Rio"
+                    + "\n         3 - Guns N’ Roses - You Could Be Mine"
+                    + "\n         4 - Faith No More -  The Real Thing");
             musica = input.nextInt();
 
-            if (musica == 4) {
-                System.out.println("O empresário gostou da apresentação da banda");
+            if (musica == 3) {
+                System.out.println("Roberto Medina gostou muito, da apresentação..... PARABÉNS para todos"
+                        + "\n       O sucesso ta começando prepara-se para maiores desafios");
                 gostou = 1;
             } else {
                 if (musica > 0 && musica <= 3) {
