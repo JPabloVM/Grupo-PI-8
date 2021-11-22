@@ -1993,50 +1993,54 @@ public class Projeto1 {
         int musica, gostou = 0;
         String ligacao;
 
-        //Oitavo desafio
-        System.out.println("\nA banda foi convidada para tocar em um evento, onde estará Roberto Medina."
-                + "\n       Ele que é um empresário que é um dos fundadores do Rock In-Rio. Então será uma oportunidade única"
-                + "\n         será um grande desafio. A banda terá que escolher a música predileta para tocar. Assim Roberto Medina"
-                + "\n       ficara satisfeito e ele podera nos ajudar a chegar no nosso grande sonho.");
+        System.out.println("\nA banda foi convidada para tocar em um evento,e descobrimos que neste lugar estará Roberto Medina."
+                + "\nEle que é um empresário e é um dos fundadores do Rock In-Rio. Então pode ser uma oportunidade de conhece-lo,"
+                + "\ne podemos fazer com que ele olhe a banda e talvez dê uma oportunidade para todos, quem sabe né....."
+                + "\n\n Em uma conversa totalmente informal, o Roberto sinalizou que gosta muito de guitarra, que tem um sonho de conhecer"
+                + "\no Slash, pois é um dos grandes ídolos dele no meio musical.");
 
         do {
-            System.out.println("\n Aqui em baixo está uma lista de 3 músicas, uma delas é a que Roberto Medina está aguardando"
-                    + "\n       ser tocada. É uma música que pode tocar o coração dele. Então faça a escolha certa. Pois nosso futuro"
-                    + "\n       dependera muito disso para o começo do sucesso. Em uma entrevista com o mesmo comentou sobre o Rock in Rio"
-                    + "\n       o mesmo falou:"
-                    + "\n       Cidade do Rock - \"É onde habito, onde coloco em prática tudo o que eu quero para o Rio de Janeiro. "
-                    + "\n       Sou perfeccionista e cuido de cada detalhe desta \"cidade\".\"");
-            System.out.println("\n1  Queen - Love Of My Life"
-                    + "\n         2 - James Taylor - Only a Dream in Rio"
-                    + "\n         3 - Guns N’ Roses - You Could Be Mine"
-                    + "\n         4 - Faith No More -  The Real Thing");
+            System.out.println("\n----- CHEGOU O GRANDE DIA DO EVENTO.....ESTÃO PREPARADOS? -----"
+                    + "\n Pense muito bem no que Roberto Medina disse, aproveite este momento para surpreende-lo. Pois não sabemos quando iremos escontra-lo denovo"
+                    + "\n\n ESCOLHA UMA MÚSICA QUE A BANDA IRÁ TOCAR:");
+            System.out.println("\n1 - Queen - Love Of My Life"
+                    + "\n2 - James Taylor - Only a Dream in Rio"
+                    + "\n3 - Guns N’ Roses - You Could Be Mine"
+                    + "\n4 - Faith No More -  The Real Thing");
             musica = input.nextInt();
 
             if (musica == 3) {
-                System.out.println("Roberto Medina gostou muito, da apresentação..... PARABÉNS para todos"
-                        + "\n       O sucesso ta começando prepara-se para maiores desafios");
+                System.out.println("HA HA HA HA sabia que a banda ia fazer a escolha certa."
+                        + "\nDeu para ver de longe que o Roberto se emocionou muito com a apresentação de vocês e que certeza ele gostou muito. "
+                        + "\nEsta apresentação foi a melhor de todas...PARABÉNS!!!"
+                        + "\nO sucesso esta começando, prepara-se para maiores desafios");
                 gostou = 1;
             } else {
-                if (musica > 0 && musica <= 3) {
-                    System.out.println("A apresentação não impressionou o empresário");
-                    System.out.println("O rock in rio ja foi anunciado e vocês não conseguiram participar.\nQuem sabe ano que vem.");
+                if (musica > 0 && musica <= 4) {
+                    System.out.println("\nA apresentação foi ótima, mas percebi que o Roberto não estava prestando atenção, estava conversando muito e nem olhava para o palco. :("
+                            + "\n Após alguns dias de angustia, para saber quais bandas vão tocar no rock in rio, saiu a lista, e não estaremos lá, deixamos escapar uma oportunidade única."); 
                     break;
                 } else {
-                    System.err.println("Número inválido\n");
+                    System.err.println("\nESCOLHA A MÚSICA CORRETA!!!");
                 }
 
             }
         } while (musica > 4);
 
         if (gostou == 1) {
-            System.out.println("Você recebem uma ligação anonima deseja atender?(S/N)");
+            System.out.println("\nApós alguns dias, o Antonio que é o empresario da banda, recebe uma ligação anonima. O mesmo questiona todos os integrantes"
+                    + "\n se é para atender ou não."
+                    + "\n---- QUEREM ATENDER A LIGAÇÃO? (S = sim/N = não) ----");
             ligacao = input.next();
 
-            if (ligacao.equals("s") || ligacao.equals("S")) {
-                System.out.println("Você descobre que a ligação erá do empresário,\ndizendo que consegiu uma vaga no rock in rio para a sua banda!");
+            if (ligacao.equals("s") || ligacao.equals("S")  || ligacao.equals("sim") || ligacao.equals("Sim") || ligacao.equals("SIM")) {
+                System.out.println("A LIGAÇÃO ANONIMA É DE NADA MENOS QUE ROBERTO MEDINA....ISSO MESMO, ELE DISSE QUE NUNCA VIU UMA APRESENTAÇÃO COMO AQUELA"
+                        + "\nELE DISSE QUE TOCOU MUITO O CORAÇÃO DELE NAQUELE DIA, E QUE AQUELA APRESENTAÇÃO FICARA NA CABEÇA DELE PARA SEMPRE."
+                        + "\nENTÃO ELE DECIDIU CONVIDAR A BANDA PARA TOCAR NO ROCK INT RIO DESTE ANO....ISSO MESMO...CONSEGUIMOS CHEGAR NO NOSSO GRANDE OBJETIVO"
+                        + "\nROCK IN RIO QUE NOS ESPERA !!!! ");
 
             } else {
-                System.out.println("O rock in rio ja foi anunciado e vocês não conseguiram participar.\n Quem sabe ano que vem.");
+                System.out.println("O rock in rio ja foi anunciado e vocês não conseguiram participar. Quem sabe ano que vem.");
             }
 
         }
