@@ -53,7 +53,7 @@ public class Projeto1 {
                         break;
                     case 2:
                         jogar();
-                        
+
                         break;
                     case 3:
                         System.out.println("---INTEGRANTES DO GRUPO 8 PARA O PROJETO INTEGRADOR 1º SEMESTRE -----"
@@ -1031,7 +1031,7 @@ public class Projeto1 {
 
             if (empresario.equals("Antonio")) {
                 System.out.println("\nAEEEE.... VOCÊ ACERTOU....PARABÉNS...SABIAMOS QUE VOCÊ NÃO IA NOS DESAPONTAR :)"); //ELABORAR UM TEXTO
-               System.out.println("pontos " + pontos);
+                System.out.println("pontos " + pontos);
                 desafio3();
                 break;
             } else {
@@ -1039,7 +1039,7 @@ public class Projeto1 {
                 System.out.println("..... VOCÊ TEM " + cont-- + " CHANCES....");
             }
         }
-        
+
     }
 
     public static void desafio3() {
@@ -1244,9 +1244,8 @@ public class Projeto1 {
     }
 
     static void desafio4() {
-            Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        int pontos = 0;
         System.out.println("Após o seu primeiro show você ganhou alguns fãs e "
                 + "todos eles estão seguindo a banda nas redes sociais,"
                 + "por isso seria muito bom para a banda se vocês fizessem um "
@@ -1823,6 +1822,7 @@ public class Projeto1 {
         } while (ponto2 <= 10);
         desafio7();
     }
+
     //DESAFIO 7    
     static void desafio7() {
 
@@ -1987,6 +1987,7 @@ public class Projeto1 {
         System.out.println("==== PARABÉNS ====\nSUA BANDA FOI A CAMPEÃ DA BATALHA DE BANDAS.");
         desafio8();
     }
+
     //DESAFIO 8
     static void desafio8() {
         Scanner input = new Scanner(System.in);
@@ -2018,7 +2019,7 @@ public class Projeto1 {
             } else {
                 if (musica > 0 && musica <= 4) {
                     System.out.println("\nA apresentação foi ótima, mas percebi que o Roberto não estava prestando atenção, estava conversando muito e nem olhava para o palco. :("
-                            + "\n Após alguns dias de angustia, para saber quais bandas vão tocar no rock in rio, saiu a lista, e não estaremos lá, deixamos escapar uma oportunidade única."); 
+                            + "\n Após alguns dias de angustia, para saber quais bandas vão tocar no rock in rio, saiu a lista, e não estaremos lá, deixamos escapar uma oportunidade única.");
                     break;
                 } else {
                     System.err.println("\nESCOLHA A MÚSICA CORRETA!!!");
@@ -2033,7 +2034,7 @@ public class Projeto1 {
                     + "\n---- QUEREM ATENDER A LIGAÇÃO? (S = sim/N = não) ----");
             ligacao = input.next();
 
-            if (ligacao.equals("s") || ligacao.equals("S")  || ligacao.equals("sim") || ligacao.equals("Sim") || ligacao.equals("SIM")) {
+            if (ligacao.equals("s") || ligacao.equals("S") || ligacao.equals("sim") || ligacao.equals("Sim") || ligacao.equals("SIM")) {
                 System.out.println("A LIGAÇÃO ANONIMA É DE NADA MENOS QUE ROBERTO MEDINA....ISSO MESMO, ELE DISSE QUE NUNCA VIU UMA APRESENTAÇÃO COMO AQUELA"
                         + "\nELE DISSE QUE TOCOU MUITO O CORAÇÃO DELE NAQUELE DIA, E QUE AQUELA APRESENTAÇÃO FICARA NA CABEÇA DELE PARA SEMPRE."
                         + "\nENTÃO ELE DECIDIU CONVIDAR A BANDA PARA TOCAR NO ROCK INT RIO DESTE ANO....ISSO MESMO...CONSEGUIMOS CHEGAR NO NOSSO GRANDE OBJETIVO"
