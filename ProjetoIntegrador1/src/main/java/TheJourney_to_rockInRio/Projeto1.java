@@ -1227,7 +1227,7 @@ public class Projeto1 {
                 System.out.println("Opção inválida!");
         }
 
-        int pontos = 0;
+       
         System.out.printf("Parabéns, você acertou %d músicas", acertos);
         if (acertos == 4 || acertos == 5) {
             System.out.println("O público ficou feliz.Você recebeu mais 50 pontos.");
