@@ -46,8 +46,8 @@ public class Projeto1 {
 
                 switch (num) {
                     case 1:
-                        System.out.println("The journey to rock in rio é um jogo textual onde você irá trilhar a sua jornada como músico em uma banda de rock."
-                                + "\nO maior desejo do grupo é se tornar uma banda de sucesso e tocar no rock in rio. "
+                        System.out.println("The Journey to Rock In Rio é um jogo textual onde você irá trilhar a sua jornada como músico em uma banda de rock."
+                                + "\nO maior desejo do grupo é se tornar uma banda de sucesso e tocar no Rock In Rio. "
                                 + "\nPara isso você terá que passar por desafios e testes durante o seu jogo, "
                                 + "\nescolhendo música certa para agradar ao público e batalhando contra outras bandas em festivais.\n");//Escrever instruções
                         break;
@@ -1031,6 +1031,7 @@ public class Projeto1 {
 
             if (empresario.equals("Antonio")) {
                 System.out.println("\nAEEEE.... VOCÊ ACERTOU....PARABÉNS...SABIAMOS QUE VOCÊ NÃO IA NOS DESAPONTAR :)"); //ELABORAR UM TEXTO
+               System.out.println("pontos " + pontos);
                 desafio3();
                 break;
             } else {
@@ -1038,7 +1039,7 @@ public class Projeto1 {
                 System.out.println("..... VOCÊ TEM " + cont-- + " CHANCES....");
             }
         }
-
+        
     }
 
     public static void desafio3() {
@@ -1243,60 +1244,95 @@ public class Projeto1 {
     }
 
     static void desafio4() {
-        Scanner input = new Scanner(System.in);
+            Scanner input = new Scanner(System.in);
 
+        int pontos = 0;
         System.out.println("Após o seu primeiro show você ganhou alguns fãs e "
                 + "todos eles estão seguindo a banda nas redes sociais,"
                 + "por isso seria muito bom para a banda se vocês fizessem um "
-                + "vídeo para o YouTube \n e Instagram falando um pouco sobre como foi o show!");
-        System.out.println("Você irá fazer o vídeo? \n Obs: Responda com sim ou não!");
-        String resposta = input.nextLine();
+                + "vídeo para o \nYouTube e Instagram falando um pouco sobre como foi o show!");
 
-        switch (resposta) {
-            case "Sim":
+        String resposta;
+
+        do {
+            System.out.println("Você irá fazer o vídeo? \n Obs: Responda com Sim ou Não!");
+            resposta = input.nextLine();
+
+            if (resposta.equalsIgnoreCase("SIM")) {
                 System.out.println("Graças ao vídeo sua banda ganhou mais 5 mil seguidores no Instagram"
                         + "e 2500 inscritos no YouTube. Por isso você ganhou mais 25 pontos de poder!");
-                System.out.println("Além disso ainda fomos convidados para um festival que valerá +150 pontos e 3 mil reais!");
+                System.out.println("Além disso ainda fomos convidados para um festival que valerá +60 pontos e 3 mil reais!");
                 pontos = pontos + 25;
-
                 break;
-            case "Não":
+            } else if (resposta.equalsIgnoreCase("NÃO")) {
                 System.out.println("Já que você não fez o vídeo você acabou perdendo 2500 seguidores no Intagram, 1250"
-                        + "incritos no YouTube e 50 pontos de poder!");
-                System.out.println("Porém por sorte você acabou sendo convidado para um festival que valerá +150 pontos e 3 mil reais!");
-                pontos = pontos - 50;
-            default:
+                        + "incritos no YouTube e 20 pontos de poder!");
+                System.out.println("Porém por sorte você acabou sendo convidado para um festival que valerá +60 pontos e 3 mil reais!");
+                pontos = pontos - 20;
+                break;
+            } else {
                 System.out.println("Opção inválida!Tente novamente.");
-        }
+            }
+
+        } while (!resposta.equalsIgnoreCase("Sim") || !resposta.equalsIgnoreCase("Não"));
 
         System.out.println("\n Dois meses depois...");
-        System.out.println("Eu: Eai pessoal todos estão preparados para o festival? Hoje vai ser um grande dia,"
-                + "não podemos esquecer que é uma batalha entre bandas,por isso nós precisamos batalhar contra uma mais \n fraca que nós!"
-                + "Por sorte só mais 3 bandas além da nossa, irão batalhar, o restante irá apenas tocar no festival.");
-        System.out.println("Antonio abre a porta do camarim: \n Opa, vim avisar que daqui 10 minutos vai começar o festival."
-                + "\n Precisamos decidir com qual banda vamos batalhar antes de irmos para o palco. "
-                + "\n Consegui um pouco de informações sobre essas bandas, olha aí a lista: "
-                + "\n (1)Banda DeathLoops: Criada 5 anos atrás, participou de 15 festivais e em todos o público amou a banda."
-                + "\n (2)Banda Metalicos : Criada 1 ano atrás, participou de 3 festivais, e foi odiada em todos."
-                + "\n (3)Banda Assasins: Criada 3 anos atrás, participou de 6 festivais, e agradou o público em 4 deles.");
-        System.out.println("Eai qual com você quer batalhar? "
-                + "\n Obs: Digite o número da banda");
-        int bandarival = input.nextInt();
-        int banda1 = 1, banda2 = 2, banda3 = 3;
 
-        if (bandarival == banda1) {
-            System.out.println("Infelizmente você perdeu a batalha! Porque a banda DeathLoops tinham um poder de 10000!"
-                    + " Com isso seu poder diminuiu 50 pontos e você foi desclassificado da batalha.");
-            pontos = pontos - 50;
+        int escolha;
+        do {
+            System.out.println("Eu: Eai pessoal todos estão preparados para o festival? Hoje vai ser um grande dia,"
+                    + "não podemos esquecer que é uma batalha entre bandas,por isso nós precisamos batalhar contra uma mais \nfraca que nós!"
+                    + "Por sorte só mais 3 bandas, além da nossa, irão batalhar, o restante irá apenas tocar no festival.");
+            System.out.println("Antonio abre a porta do camarim: \n Opa, vim avisar que daqui 10 minutos vai começar o festival."
+                    + "\n Precisamos decidir com qual banda vamos batalhar antes de irmos para o palco. "
+                    + "\n Consegui um pouco de informações sobre essas bandas, olha aí a lista: "
+                    + "\n (1)Banda DeathLoops: Criada 5 meses atrás, participou de 1 festival e o público amou a banda."
+                    + "\n (2)Banda Metalicos : Criada 1 ano atrás, participou de 3 festivais, e foi odiada em todos."
+                    + "\n (3)Banda Assasins: Criada 3 meses atrás, participou de 1 festival, e agradou o público nele.");
+            System.out.println("Eai qual com você quer batalhar? "
+                    + "\n Obs: Digite o número da banda");
+            escolha = input.nextInt();
 
-        } else if (bandarival == banda2) {
-            System.out.println("Parábens você venceu a batalha!! A banda Metálicos tinha apenas 50 pontos e você ganhou mais 100 pontos de poder");
-            pontos = pontos + 100;
-        } else if (bandarival == banda3) {
-            System.out.println("Infelizmente você perdeu a batalha! Porque a banda Assasins tinham um poder de 3000!"
-                    + "Com isso seu poder diminuiu 50 pontos e você foi desclassificado da batalha.");
-        }
-        desafio5();
+            if (escolha == 1) {
+                if (pontos >= 85) {
+                    System.out.println("Parábens você venceu a batalha!! A banda DeathLoops tinha apenas 85 pontos de poder e você ganhou mais 40 pontos de poder");
+                    pontos = pontos + 60;
+                    desafio5();
+                } else {
+                    System.out.println("Infelizmente você perdeu a batalha! Porque a banda DeathLoops tinham 60 pontos de poder!"
+                            + " Com isso seu poder diminuiu 15 pontos e você foi desclassificado da batalha.");
+                    pontos = pontos - 15;
+                }
+            } else if (escolha == 2) {
+
+                if (pontos < 50 && pontos > 15) {
+                    System.out.println("Parábens você venceu a batalha!! A banda Metalicos tinha apenas 15 pontos de poder e você ganhou mais 40 pontos de poder");
+                    pontos = pontos + 60;
+                    desafio5();
+                } else {
+                    System.out.println("Infelizmente você perdeu a batalha! Porque a banda Metalicos tinha apenas 15 pontos de poder!"
+                            + " Como você não conseguiu derrotar a banda mais fraca o público nunca mais quis ouvi-los \n e a jornada para o Rock In Rio acabou.");
+                    pontos = pontos - 15;
+                }
+            } else if (escolha == 3) {
+
+                if (pontos <= 50 && pontos < 85) {
+                    System.out.println("Parábens você venceu a batalha!! A banda Assasins tinha apenas 50 pontos de poder e você ganhou mais 60 pontos de poder");
+                    pontos = pontos + 60;
+                    desafio5();
+                } else {
+                    System.out.println("Infelizmente você perdeu a batalha! Porque a banda Assasins tinham um poder de 300!"
+                            + " Com isso seu poder diminuiu 15 pontos e você foi desclassificado da batalha.");
+                    pontos = pontos - 15;
+                    desafio5();
+                }
+
+            } else {
+
+                System.out.println("Opção inválida!");
+
+            }
+        } while (escolha <= 0 || escolha > 3);
     }
 
     static void desafio5() {
