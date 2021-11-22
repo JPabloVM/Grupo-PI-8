@@ -1837,7 +1837,7 @@ public class Projeto1 {
         dano[3] = 25;
         dano[4] = 30;
 
-        System.out.println("Depois da viajem, a banda decide se inscrever em um festival de batalhas de bandas.\n"
+        System.out.println("Ao retornar para o Brasil, a banda decide se inscrever em um festival de batalhas de bandas.\n"
                 + "Nesse festival, vocês terão que derrotar as outras bandas para poderem ganhar o prêmio.");
         System.out.println("\n===== Batalha entre bandas =====");
         System.out.println("Você tem que fazer a vida da banda adversaria chegar a 0 antes da sua,\n"
